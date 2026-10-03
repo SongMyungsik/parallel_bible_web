@@ -119,7 +119,7 @@ flutter build web --base-href /parallel_bible_web/
 - `logic/word_matcher.dart`: **연속 두 단어**가 서로 다른 책에 나오면 공통 표현. 한국어 조사 차이는 앞부분 일치로 허용. `[없음]` 같은 대괄호 표시는 비교 안 함.
 - `data/passage_data.dart`: JSON → 메모리(묶음 줄·구절 줄, 검사 포함). `PassageCollection.parallel / quotation`.
 - `data/memory_bible_text_source.dart`: 성경 본문 JSON → 메모리 (`BibleTextSource` 구현).
-- `state/`: `ParallelState`(목록), `AppSettings`(설정·최근 본 것, `shared_preferences` = 웹은 localStorage), `AppNavigation`(대조 화면 → 성경 이동 요청).
+- `state/`: `ParallelState`(목록), `AppSettings`(설정·최근 본 것, `shared_preferences` = 웹은 localStorage. **저장 이름 앞에 `parallel_bible_web.`** — songmyungsik.github.io의 다른 Flutter 웹앱과 저장소를 함께 쓰므로 기본 `flutter.`를 쓰면 값이 섞여 오류가 났음), `AppNavigation`(대조 화면 → 성경 이동 요청).
 - `ui/`: `gospel_colors.dart`(색 규칙), `grouped_list.dart`(소제목·검색), `synopsis_table.dart`(대조표). 
 
 ## 색 규칙

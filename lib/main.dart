@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'data/bible_text_source.dart';
 import 'data/memory_bible_text_source.dart';
@@ -13,6 +14,8 @@ import 'state/parallel_state.dart';
 void main() {
   // rootBundle(JSON 읽기)을 쓰려면 꼭 필요합니다.
   WidgetsFlutterBinding.ensureInitialized();
+  // 설정을 이 앱만의 이름으로 저장 (같은 주소의 다른 웹앱과 섞이지 않게)
+  SharedPreferences.setPrefix(AppSettings.storagePrefix);
   runApp(const ParallelViewerApp());
 }
 

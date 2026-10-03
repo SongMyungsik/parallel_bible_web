@@ -61,6 +61,12 @@ class RecentView {
 /// shared_preferences에 "이름 = 값" 형태로 저장합니다. (웹에서는 브라우저의 localStorage)
 /// 같은 브라우저로 다시 열면 설정이 유지됩니다.
 class AppSettings extends ChangeNotifier {
+  /// 저장 이름 앞에 붙는 이 앱만의 이름표.
+  /// 브라우저 저장소는 songmyungsik.github.io 주소 전체가 함께 쓰므로, 기본값('flutter.')을 쓰면
+  /// 같은 주소의 다른 Flutter 웹앱이 저장한 값(예: 숫자로 된 app_color)과 섞입니다.
+  /// main()에서 SharedPreferences.setPrefix(storagePrefix)로 지정합니다.
+  static const String storagePrefix = 'parallel_bible_web.';
+
   SharedPreferences? _prefs;
 
   ThemeMode themeMode = ThemeMode.system;
@@ -81,7 +87,11 @@ class AppSettings extends ChangeNotifier {
   /// 저장된 값을 읽어 옵니다. (앱 시작 때 한 번)
   Future<void> load() async {
     final prefs = _prefs = await SharedPreferences.getInstance();
-    String? read(String key) => prefs.getString(key);
+    // 글자가 아닌 값(다른 앱이 남긴 값 등)은 없는 것으로 보고 기본값을 씀
+    String? read(String key) {
+      final value = prefs.get(key);
+      return value is String ? value : null;
+    }
 
     themeMode = ThemeMode.values.firstWhere(
       (m) => m.name == read('theme_mode'),
