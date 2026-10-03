@@ -140,7 +140,7 @@ class ChurchLogo extends StatelessWidget {
     final dark = Theme.of(context).brightness == Brightness.dark;
     final logo = Image.asset(
       'assets/images/church_logo.png',
-      width: 200,
+      width: 150,
       semanticLabel: '광은교회',
     );
     if (!dark) return logo;
