@@ -1,16 +1,9 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:path/path.dart' as p;
 import 'package:provider/provider.dart';
-// ignore: unnecessary_import
-import 'package:sqflite/sqflite.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
-import 'data/bible_importer.dart';
 import 'data/bible_text_source.dart';
-import 'data/db_bible_text_source.dart';
-import 'data/parallel_importer.dart';
+import 'data/memory_bible_text_source.dart';
+import 'data/passage_data.dart';
 import 'pages/main_shell.dart';
 import 'pages/start_page.dart';
 import 'state/app_navigation.dart';
@@ -20,18 +13,14 @@ import 'state/parallel_state.dart';
 void main() {
   // rootBundle(JSON 읽기)을 쓰려면 꼭 필요합니다.
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Windows에서는 ffi 방식으로 sqflite를 켭니다. (Android는 기본 그대로)
-  if (Platform.isWindows || Platform.isLinux) {
-    sqfliteFfiInit();
-    databaseFactory = databaseFactoryFfi;
-  }
-
   runApp(const ParallelViewerApp());
 }
 
+/// 앱을 켤 때 메모리에 올리는 데이터 (병행·인용 목록 + 성경 본문)
+typedef _AppData = ({PassageData passages, MemoryBibleTextSource bible});
+
 // ---------------------------------------------------------------
-// 앱: 시작 화면에서 DB를 준비하고, [시작하기]를 누르면 본 화면(하단 네비)으로 넘어갑니다.
+// 앱: 시작 화면에서 데이터를 불러오고, [시작하기]를 누르면 본 화면(하단 네비)으로 넘어갑니다.
 // ---------------------------------------------------------------
 class ParallelViewerApp extends StatefulWidget {
   const ParallelViewerApp({super.key});
@@ -42,7 +31,7 @@ class ParallelViewerApp extends StatefulWidget {
 
 class _ParallelViewerAppState extends State<ParallelViewerApp> {
   final AppSettings _settings = AppSettings();
-  Database? _db;
+  _AppData? _data;
   String _message = '준비하는 중…';
   Object? _error;
 
@@ -57,22 +46,18 @@ class _ParallelViewerAppState extends State<ParallelViewerApp> {
 
   Future<void> _prepare() async {
     try {
-      // DB 열기 → 설정 읽기 (시작 화면 색도 저장된 앱 색상으로 바뀜)
-      final dbPath = p.join(await getDatabasesPath(), 'parallel_viewer.db');
-      final db = await openDatabase(dbPath);
-      await _settings.load(db);
+      // 설정 읽기 (시작 화면 색도 저장된 앱 색상으로 바뀜)
+      await _settings.load();
 
-      // 표 만들기 → JSON 넣기 (바뀐 것이 있을 때만 실제로 넣음)
-      _setMessage('병행 · 인용 목록을 준비하는 중…');
-      await ParallelImporter.createTables(db);
-      await ParallelImporter.importIfNeeded(db, PassageCollection.parallel);
-      await ParallelImporter.importIfNeeded(db, PassageCollection.quotation);
+      _setMessage('병행 · 인용 목록을 불러오는 중…');
+      final passages = await PassageData.load();
 
-      _setMessage('성경 본문을 준비하는 중… (처음 한 번은 몇 초 걸립니다)');
-      await BibleImporter.createTables(db);
-      await BibleImporter.importIfNeeded(db);
+      _setMessage('성경 본문을 불러오는 중… (처음 한 번은 몇 초 걸립니다)');
+      final bible = await MemoryBibleTextSource.load();
 
-      if (mounted) setState(() => _db = db);
+      if (mounted) {
+        setState(() => _data = (passages: passages, bible: bible));
+      }
     } catch (e) {
       if (mounted) setState(() => _error = e);
     }
@@ -84,7 +69,7 @@ class _ParallelViewerAppState extends State<ParallelViewerApp> {
 
   @override
   Widget build(BuildContext context) {
-    final db = _db;
+    final data = _data;
 
     // 설정(화면 모드·앱 색상)이 바뀌면 앱 전체 테마를 다시 그림
     return ListenableBuilder(
@@ -99,12 +84,12 @@ class _ParallelViewerAppState extends State<ParallelViewerApp> {
           home: home,
         );
 
-        if (db == null || !_started) {
+        if (data == null || !_started) {
           return app(
             StartPage(
               message: _message,
               error: _error,
-              onStart: db == null
+              onStart: data == null
                   ? null
                   : () => setState(() => _started = true),
             ),
@@ -119,10 +104,10 @@ class _ParallelViewerAppState extends State<ParallelViewerApp> {
             // 화면끼리 주고받는 이동 요청 (대조 화면 → 성경)
             ChangeNotifierProvider(create: (_) => AppNavigation()),
             ChangeNotifierProvider(
-              create: (_) => ParallelState(db)..loadGroups(),
+              create: (_) => ParallelState(data.passages)..loadGroups(),
             ),
-            // 본문 공급처: 성경 DB. (화면만 확인하고 싶을 땐 SampleBibleTextSource()로 바꾸면 됩니다.)
-            Provider<BibleTextSource>(create: (_) => DbBibleTextSource(db)),
+            // 본문 공급처: 메모리에 올린 성경. (화면만 확인하고 싶을 땐 SampleBibleTextSource()로 바꾸면 됩니다.)
+            Provider<BibleTextSource>.value(value: data.bible),
           ],
           child: app(const MainShell()),
         );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sqflite/sqflite.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 /// 앱 색상 선택지 (앱바와 하단 네비 바탕색). 서로 뚜렷이 다른 5가지만 둡니다.
 /// 앱바 글자가 흰색이라 흰 글자가 잘 보이는 진한 톤만 씁니다.
@@ -56,12 +56,12 @@ class RecentView {
   }
 }
 
-/// 설정 값(화면 모드, 앱 색상, 마지막으로 읽은 성경 위치)을 기억하고 DB에 저장합니다.
+/// 설정 값(화면 모드, 앱 색상, 마지막으로 읽은 성경 위치)을 기억하고 저장합니다.
 ///
-/// DB의 app_settings 표에 "이름 = 값" 형태로 저장합니다.
-/// 앱을 다시 켜도 설정이 유지됩니다.
+/// shared_preferences에 "이름 = 값" 형태로 저장합니다. (웹에서는 브라우저의 localStorage)
+/// 같은 브라우저로 다시 열면 설정이 유지됩니다.
 class AppSettings extends ChangeNotifier {
-  Database? _db;
+  SharedPreferences? _prefs;
 
   ThemeMode themeMode = ThemeMode.system;
   AppColorOption appColor = AppColorOption.indigo;
@@ -78,31 +78,21 @@ class AppSettings extends ChangeNotifier {
   final biblePosition = ValueNotifier<(String, int)>(('GEN', 1));
   final recentQuotation = ValueNotifier<RecentView?>(null);
 
-  /// 표를 만들고 저장된 값을 읽어 옵니다. (앱 시작 때 한 번)
-  Future<void> load(Database db) async {
-    _db = db;
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS app_settings (
-        key TEXT PRIMARY KEY,
-        value TEXT NOT NULL
-      )
-    ''');
-
-    final rows = await db.query('app_settings');
-    final values = {
-      for (final r in rows) r['key'] as String: r['value'] as String,
-    };
+  /// 저장된 값을 읽어 옵니다. (앱 시작 때 한 번)
+  Future<void> load() async {
+    final prefs = _prefs = await SharedPreferences.getInstance();
+    String? read(String key) => prefs.getString(key);
 
     themeMode = ThemeMode.values.firstWhere(
-      (m) => m.name == values['theme_mode'],
+      (m) => m.name == read('theme_mode'),
       orElse: () => ThemeMode.system,
     );
-    appColor = AppColorOption.fromName(values['app_color']);
-    bibleBook = values['bible_book'] ?? 'GEN';
-    bibleChapter = int.tryParse(values['bible_chapter'] ?? '') ?? 1;
+    appColor = AppColorOption.fromName(read('app_color'));
+    bibleBook = read('bible_book') ?? 'GEN';
+    bibleChapter = int.tryParse(read('bible_chapter') ?? '') ?? 1;
     biblePosition.value = (bibleBook, bibleChapter);
-    recentParallel.value = RecentView.decode(values['recent_parallel']);
-    recentQuotation.value = RecentView.decode(values['recent_quotation']);
+    recentParallel.value = RecentView.decode(read('recent_parallel'));
+    recentQuotation.value = RecentView.decode(read('recent_quotation'));
 
     notifyListeners();
   }
@@ -145,10 +135,7 @@ class AppSettings extends ChangeNotifier {
   }
 
   Future<void> _save(String key, String value) async {
-    await _db?.insert('app_settings', {
-      'key': key,
-      'value': value,
-    }, conflictAlgorithm: ConflictAlgorithm.replace);
+    await _prefs?.setString(key, value);
   }
 
   // ---- 테마 만들기 ----

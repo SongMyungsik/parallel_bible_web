@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:parallel_viewer/pages/start_page.dart';
+import 'package:parallel_bible_web/pages/start_page.dart';
 
 void main() {
   Future<void> pumpAt(WidgetTester tester, Size size, Widget page) async {

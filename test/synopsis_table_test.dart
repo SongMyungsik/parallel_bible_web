@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:parallel_viewer/data/ref_format.dart';
-import 'package:parallel_viewer/ui/synopsis_table.dart';
+import 'package:parallel_bible_web/data/ref_format.dart';
+import 'package:parallel_bible_web/ui/synopsis_table.dart';
 
 Map<String, Object?> ref(
   String book,

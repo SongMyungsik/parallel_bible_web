@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:sqflite/sqflite.dart';
 
-import '../data/parallel_importer.dart';
+import '../data/passage_data.dart';
 import '../data/ref_format.dart';
 
 /// 구약 인용 하나가 인용한 첫 구약 본문의 위치 ("구약 순서" 정렬용)
@@ -13,11 +12,11 @@ class OtPosition {
   final int position; // 장*1000 + 절
 }
 
-/// 묶음 목록(복음서 병행, 구약 인용)과 구절 위치를 DB에서 읽어 화면에 전달합니다.
+/// 묶음 목록(복음서 병행, 구약 인용)과 구절 위치를 메모리의 데이터에서 읽어 화면에 전달합니다.
 class ParallelState extends ChangeNotifier {
-  ParallelState(this.db);
+  ParallelState(this.data);
 
-  final Database db;
+  final PassageData data;
 
   /// 복음서 병행 목록 (생애 단계 → 순서대로)
   List<Map<String, Object?>> groups = [];
@@ -41,26 +40,17 @@ class ParallelState extends ChangeNotifier {
   bool loading = true;
 
   Future<void> loadGroups() async {
-    groups = await ParallelImporter.getGroups(db, PassageCollection.parallel);
-    quotations = await ParallelImporter.getGroups(
-      db,
-      PassageCollection.quotation,
-    );
+    groups = data.groups(PassageCollection.parallel);
+    quotations = data.groups(PassageCollection.quotation);
 
-    final parRefs = await ParallelImporter.getRefsOfCollection(
-      db,
-      PassageCollection.parallel,
-    );
+    final parRefs = data.refsOfCollection(PassageCollection.parallel);
     parallelSummaries = _summaries(parRefs);
     parallelRefs = {};
     for (final r in parRefs) {
       parallelRefs.putIfAbsent(r['group_id'] as int, () => []).add(r);
     }
 
-    final quoteRefs = await ParallelImporter.getRefsOfCollection(
-      db,
-      PassageCollection.quotation,
-    );
+    final quoteRefs = data.refsOfCollection(PassageCollection.quotation);
     quotationSummaries = _summaries(quoteRefs);
     quotationRefs = {};
     for (final r in quoteRefs) {
@@ -93,7 +83,7 @@ class ParallelState extends ChangeNotifier {
   }
 
   Future<List<Map<String, Object?>>> getRefs(int groupId) {
-    return ParallelImporter.getRefs(db, groupId);
+    return Future.value(data.refs(groupId));
   }
 
   /// 성경의 한 장에 걸친 병행·인용 범위들
@@ -101,6 +91,6 @@ class ParallelState extends ChangeNotifier {
     String book,
     int chapter,
   ) {
-    return ParallelImporter.getRefsInChapter(db, book, chapter);
+    return Future.value(data.refsInChapter(book, chapter));
   }
 }

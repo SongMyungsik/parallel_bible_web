@@ -1,5 +1,5 @@
-name: parallel_viewer
-description: "A new Flutter project."
+name: parallel_bible_web
+description: "병행 구절 대조 · 웹판"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -34,10 +34,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  sqflite: ^2.4.2+1
-  sqflite_common_ffi: ^2.4.0+3
   provider: ^6.1.5+1
-  path: ^1.9.1
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:

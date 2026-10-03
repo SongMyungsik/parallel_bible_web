@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:parallel_viewer/data/ref_format.dart';
-import 'package:parallel_viewer/data/sections.dart';
-import 'package:parallel_viewer/logic/word_matcher.dart';
-import 'package:parallel_viewer/state/app_settings.dart';
-import 'package:parallel_viewer/ui/grouped_list.dart';
+import 'package:parallel_bible_web/data/ref_format.dart';
+import 'package:parallel_bible_web/data/sections.dart';
+import 'package:parallel_bible_web/logic/word_matcher.dart';
+import 'package:parallel_bible_web/state/app_settings.dart';
+import 'package:parallel_bible_web/ui/grouped_list.dart';
 
 void main() {
   group('WordMatcher', () {

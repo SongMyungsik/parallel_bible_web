@@ -2,77 +2,59 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart' show compute;
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:sqflite/sqflite.dart';
 
+import 'bible_text_source.dart';
 import 'ref_format.dart';
 
-/// 성경 본문 JSON(assets)을 SQLite 표 `bible_verse`로 옮기는 도우미.
+/// 성경 본문 JSON(assets)을 통째로 메모리에 올려 두고 읽는 본문 공급처.
 ///
-/// 사용 순서 (앱 시작 시, DB를 연 직후):
-///   await BibleImporter.createTables(db);
-///   await BibleImporter.importIfNeeded(db);
-class BibleImporter {
-  BibleImporter._();
+/// 웹에서는 SQLite를 쓸 수 없어서, 앱을 켤 때마다 JSON을 읽어 메모리에 둡니다.
+/// (본문은 읽기만 하므로 DB가 없어도 충분합니다. 브라우저가 파일을 기억해 두어 두 번째부터는 빠름)
+///
+/// 사용: final bible = await MemoryBibleTextSource.load();
+class MemoryBibleTextSource implements BibleTextSource {
+  MemoryBibleTextSource(this._books);
 
   static const String assetPath = 'assets/data/koreanbible.json';
 
-  /// 성경 데이터 파일을 바꾸면(예: 개역개정 → 개역한글) 이 숫자를 올리세요.
-  /// 숫자가 올라가면 다음 실행 때 본문을 통째로 다시 넣습니다.
-  /// 1 = 개역개정, 2 = 개역한글(신약), 3 = 개역한글 + "[없음]" 표기,
-  /// 4 = 개역한글 구약·신약 + 시편 표제,
-  /// 5 = [없음] 13절의 본문을 예전 신약 파일(koreanbible.csv)에서 채움
-  static const int dataVersion = 5;
+  /// 책 코드 → 장 번호 → 그 장의 절들 (절 번호 순)
+  final Map<String, Map<int, List<VerseText>>> _books;
 
-  static Future<void> createTables(Database db) async {
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS bible_verse (
-        book TEXT NOT NULL,
-        chapter INTEGER NOT NULL,
-        verse INTEGER NOT NULL,
-        heading TEXT,
-        text TEXT NOT NULL,
-        PRIMARY KEY (book, chapter, verse)
-      )
-    ''');
-
-    await db.execute('''
-      CREATE TABLE IF NOT EXISTS bible_meta (
-        key TEXT PRIMARY KEY,
-        value TEXT NOT NULL
-      )
-    ''');
+  /// JSON을 읽어 가공한 뒤 메모리에 올립니다.
+  static Future<MemoryBibleTextSource> load() async {
+    final raw = await rootBundle.loadString(assetPath);
+    // 8MB짜리 JSON 해석은 별도 작업 공간(isolate)에서 해서 화면이 멈추지 않게 함
+    // (웹에서는 같은 곳에서 돌지만 결과는 같습니다)
+    return MemoryBibleTextSource(await compute(parseBible, raw));
   }
 
-  /// 새로 넣었으면 true, 이미 최신이라 건너뛰었으면 false.
-  static Future<bool> importIfNeeded(Database db) async {
-    final rows = await db.query(
-      'bible_meta',
-      where: 'key = ?',
-      whereArgs: ['data_version'],
-    );
-    final current = rows.isEmpty ? 0 : int.parse(rows.first['value'] as String);
-    if (current >= dataVersion) return false;
+  @override
+  Future<Map<String, int>> chapterCounts() async => {
+    for (final e in _books.entries)
+      e.key: e.value.keys.reduce((a, b) => a > b ? a : b),
+  };
 
-    final raw = await rootBundle.loadString(assetPath);
+  @override
+  Future<List<VerseText>> getVerses({
+    required String book,
+    required int chapter,
+    required int verseStart,
+    required int chapterEnd,
+    required int verseEnd,
+  }) async {
+    final chapters = _books[book];
+    if (chapters == null) return const [];
 
-    // 8MB짜리 JSON 해석은 별도 작업 공간(isolate)에서 해서 화면이 멈추지 않게 함
-    final verses = await compute(_parseBible, raw);
-
-    await db.transaction((txn) async {
-      await txn.delete('bible_verse');
-
-      final batch = txn.batch();
-      for (final v in verses) {
-        batch.insert('bible_verse', v);
-      }
-      batch.insert('bible_meta', {
-        'key': 'data_version',
-        'value': '$dataVersion',
-      }, conflictAlgorithm: ConflictAlgorithm.replace);
-      await batch.commit(noResult: true);
-    });
-
-    return true;
+    // (장 × 1000 + 절)로 바꿔서 "8장 23절 ~ 9장 2절" 같은 범위도 한 번에 찾습니다.
+    final start = chapter * 1000 + verseStart;
+    final end = chapterEnd * 1000 + verseEnd;
+    return [
+      for (var c = chapter; c <= chapterEnd; c++)
+        for (final v in chapters[c] ?? const <VerseText>[])
+          if (v.chapter * 1000 + v.verse >= start &&
+              v.chapter * 1000 + v.verse <= end)
+            v,
+    ];
   }
 }
 
@@ -93,14 +75,14 @@ final RegExp _psalmTitlePattern = RegExp(r'^\[([^\[\]]+)\]\s*(\S[\s\S]*)$');
 /// 사본 문제로 빠지기도 하는 절 앞에 붙은 "(없음)" 표시 (예: 마 17:21)
 final RegExp _omittedMark = RegExp(r'^\(없음\)\s*');
 
-/// JSON 한 줄 = {no, book, chapter, paragraph, korean} 을
-/// DB에 넣을 {book(코드), chapter, verse, heading, text} 로 바꿉니다.
-List<Map<String, Object?>> _parseBible(String raw) {
+/// JSON 한 줄 = {no, book, chapter, paragraph, korean} 을 가공해
+/// 책 코드 → 장 → 절 목록으로 묶습니다.
+Map<String, Map<int, List<VerseText>>> parseBible(String raw) {
   final list = jsonDecode(raw) as List;
 
   final used = <String>{}; // 이미 쓴 (책|장|절)
   final maxVerse = <String, int>{}; // 장별로 지금까지 나온 가장 큰 절 번호
-  final rows = <Map<String, Object?>>[];
+  final books = <String, Map<int, List<VerseText>>>{};
 
   for (final item in list) {
     final r = item as Map<String, dynamic>;
@@ -151,13 +133,17 @@ List<Map<String, Object?>> _parseBible(String raw) {
       }
     }
 
-    rows.add({
-      'book': code,
-      'chapter': chapter,
-      'verse': verse,
-      'heading': heading,
-      'text': text,
-    });
+    books
+        .putIfAbsent(code, () => {})
+        .putIfAbsent(chapter, () => [])
+        .add(VerseText(chapter, verse, text, heading: heading));
   }
-  return rows;
+
+  // 절 번호 순으로 정렬 (번호를 보정한 절이 있어도 순서가 맞게)
+  for (final chapters in books.values) {
+    for (final verses in chapters.values) {
+      verses.sort((a, b) => a.verse.compareTo(b.verse));
+    }
+  }
+  return books;
 }
