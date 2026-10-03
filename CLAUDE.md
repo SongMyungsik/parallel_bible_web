@@ -21,10 +21,11 @@
   `lib/data/memory_bible_text_source.dart`(본문), 설정은 `shared_preferences`. sqflite·path·dart:io 없음. 패키지 이름 `parallel_bible_web`.
 - ✅ 4 웹 꾸미기: `web/index.html`(불러오는 화면, `web/flutter_bootstrap.js`에서 지움)·`manifest.json`, 아이콘은 `python tool/make_app_icon.py`.
   한글 글꼴은 Flutter 웹이 자동으로 Noto Sans KR을 내려받음(따로 넣지 않음).
-- ⏳ 5 배포: `.github/workflows/deploy.yml` 준비됨(main에 올리면 빌드→Pages). 저장소 만들기·올리기는 사용자 확인 후.
-  저장소 설정 Pages → Source: GitHub Actions.
+- ✅ 5 배포: 공개 저장소 https://github.com/SongMyungsik/parallel_bible_web , Pages(GitHub Actions) 켬.
+  **main에 push하면 자동으로 빌드·테스트·배포** (`.github/workflows/deploy.yml`, 몇 분 걸림). 주소 https://songmyungsik.github.io/parallel_bible_web/
+  `gh` 로그인에 workflow 권한 추가함.
 - ⏳ 6 폰 확인·사용 안내문.
-- git: 로컬 저장소만 있음(`git init`). 줄 끝 LF(`core.autocrlf false`).
+- git: 줄 끝 LF(`core.autocrlf false`). Git Bash에서 `--base-href /…`를 쓰면 경로가 바뀌므로 `MSYS_NO_PATHCONV=1`을 앞에 붙이거나 PowerShell에서 실행.
 
 ## 작업 계획 (처음 세운 계획, 위 진행 상황 참고)
 1. **정리**: Play·Android 출시 전용 자료 빼기 — `promo/store/`, `promo/screenshots/`, 홍보 포스터 등은 필요 없으면 지우기(사용자에게 물어보기).
