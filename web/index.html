@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- flutter build web --base-href /parallel_bible_web/ 로 빌드하면 아래 값이 바뀝니다 -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="복음서의 병행 본문과 신약이 인용한 구약 본문을 나란히 놓고 같은 표현을 색으로 비교합니다. (개역한글)">
+  <meta name="theme-color" content="#3F51B5">
+
+  <!-- 홈 화면에 추가했을 때 앱처럼 (주소창 없이) -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="병행 구절 대조">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>병행 구절 대조</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    html, body { margin: 0; height: 100%; background: #ffffff; }
+    @media (prefers-color-scheme: dark) { html, body { background: #121212; } }
+    /* Flutter가 뜨기 전에 잠깐 보이는 안내 (flutter_bootstrap.js에서 지움) */
+    #loading {
+      position: fixed; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 20px; font-family: sans-serif; color: #3F51B5;
+    }
+    #loading img { width: 96px; height: 96px; }
+    #loading .bar {
+      width: 140px; height: 4px; border-radius: 2px; overflow: hidden;
+      background: rgba(63, 81, 181, 0.2); position: relative;
+    }
+    #loading .bar::after {
+      content: ''; position: absolute; top: 0; left: -40%; width: 40%; height: 100%;
+      background: #3F51B5; animation: slide 1.2s ease-in-out infinite;
+    }
+    @keyframes slide { to { left: 100%; } }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <img src="icons/Icon-192.png" alt="">
+    <div>병행 구절 대조</div>
+    <div class="bar"></div>
+  </div>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

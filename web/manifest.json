@@ -1,0 +1,18 @@
+{
+    "name": "병행 구절 대조",
+    "short_name": "병행 구절 대조",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#3F51B5",
+    "description": "복음서의 병행 본문과 신약이 인용한 구약 본문을 나란히 놓고 같은 표현을 색으로 비교합니다. (개역한글)",
+    "lang": "ko",
+    "orientation": "any",
+    "prefer_related_applications": false,
+    "icons": [
+        { "src": "icons/Icon-192.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "icons/Icon-512.png", "sizes": "512x512", "type": "image/png" },
+        { "src": "icons/Icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+        { "src": "icons/Icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    ]
+}

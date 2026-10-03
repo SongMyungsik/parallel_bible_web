@@ -1,13 +1,12 @@
 """앱 아이콘 만들기: 펼친 성경의 양쪽 페이지를 같은 색 줄로 대조하는 모습.
 
 실행:  python tool/make_app_icon.py
-       python tool/make_app_icon.py --store   (Play 스토어용 512 아이콘만: promo/store/icon_512.png)
 만드는 파일:
-  - assets/icon/app_icon.png               (앱 안: 스플래시·홈 화면)
-  - android/app/src/main/res/mipmap-*/ic_launcher.png            (옛 Android용)
-  - android/app/src/main/res/mipmap-*/ic_launcher_foreground.png (Android 8+ 적응형 아이콘 앞면)
-  - android/app/src/main/res/drawable/ic_launcher_background.xml (적응형 아이콘 바탕)
-  - android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+  - assets/icon/app_icon.png          (앱 안: 시작 화면·홈 화면)
+  - web/favicon.png                   (브라우저 탭)
+  - web/icons/Icon-192.png, Icon-512.png                (둥근 모서리, 홈 화면에 추가할 때)
+  - web/icons/Icon-maskable-192.png, -512.png          (안드로이드: 바탕을 꽉 채우고 그림은 안쪽에 작게)
+  - web/icons/apple-touch-icon.png    (아이폰: 모서리를 깎지 않은 정사각형, 투명 없음 — 둥근 모양은 iOS가 입힘)
   - windows/runner/resources/app_icon.ico
 디자인을 바꾸려면 아래 색·좌표를 고친 뒤 다시 실행하세요.
 """
@@ -112,15 +111,15 @@ def full_icon(size):
     return img.resize((size, size), Image.LANCZOS)
 
 
-def foreground(size):
-    """Android 적응형 아이콘 앞면: 108dp 중 가운데 66dp 안에 들어가게 작게"""
-    img = Image.new('RGBA', (S, S), (0, 0, 0, 0))
-    draw_symbol(img, scale=0.62)
+def maskable(size):
+    """안드로이드 '홈 화면에 추가'용: 바탕은 꽉 찬 정사각형, 그림은 가운데 안전 영역(80% 원) 안에"""
+    img = gradient_bg(S, radius=0)
+    draw_symbol(img, scale=0.7)
     return img.resize((size, size), Image.LANCZOS)
 
 
-def store_icon(size=512):
-    """Play 스토어 등록용: 모서리를 깎지 않은 꽉 찬 정사각형 (둥근 모양은 Play가 입힘), 알파 없음"""
+def square_icon(size):
+    """아이폰용: 모서리를 깎지 않은 꽉 찬 정사각형, 알파 없음"""
     img = gradient_bg(S, radius=0)
     draw_symbol(img, scale=0.92)
     return img.convert('RGB').resize((size, size), Image.LANCZOS)
@@ -134,43 +133,14 @@ def save(img, *path):
 
 
 def main():
-    # python tool/make_app_icon.py --store → 스토어용 512 아이콘만 (promo/store/icon_512.png)
-    if '--store' in sys.argv:
-        save(store_icon(512), 'promo', 'store', 'icon_512.png')
-        return
-
     big = full_icon(1024)
     save(big, 'assets', 'icon', 'app_icon.png')
 
-    res = ('android', 'app', 'src', 'main', 'res')
-    for name, px in {'mdpi': 48, 'hdpi': 72, 'xhdpi': 96, 'xxhdpi': 144, 'xxxhdpi': 192}.items():
-        save(full_icon(px), *res, f'mipmap-{name}', 'ic_launcher.png')
-        save(foreground(px * 108 // 48), *res, f'mipmap-{name}', 'ic_launcher_foreground.png')
-
-    def write(text, *path):
-        p = os.path.join(ROOT, *path)
-        os.makedirs(os.path.dirname(p), exist_ok=True)
-        with open(p, 'w', encoding='utf-8', newline='\n') as f:
-            f.write(text)
-        print('저장', os.path.relpath(p, ROOT))
-
-    hex_ = lambda c: '#FF%02X%02X%02X' % c
-    write(f'''<?xml version="1.0" encoding="utf-8"?>
-<!-- 앱 아이콘 바탕 (tool/make_app_icon.py가 만듦) -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <gradient
-        android:angle="270"
-        android:startColor="{hex_(TOP)}"
-        android:endColor="{hex_(BOTTOM)}" />
-</shape>
-''', *res, 'drawable', 'ic_launcher_background.xml')
-    write('''<?xml version="1.0" encoding="utf-8"?>
-<!-- Android 8+ 적응형 아이콘 (tool/make_app_icon.py가 만듦) -->
-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
-    <background android:drawable="@drawable/ic_launcher_background" />
-    <foreground android:drawable="@mipmap/ic_launcher_foreground" />
-</adaptive-icon>
-''', *res, 'mipmap-anydpi-v26', 'ic_launcher.xml')
+    save(full_icon(32), 'web', 'favicon.png')
+    for px in (192, 512):
+        save(full_icon(px), 'web', 'icons', f'Icon-{px}.png')
+        save(maskable(px), 'web', 'icons', f'Icon-maskable-{px}.png')
+    save(square_icon(180), 'web', 'icons', 'apple-touch-icon.png')
 
     ico = full_icon(256)
     p = os.path.join(ROOT, 'windows', 'runner', 'resources', 'app_icon.ico')
