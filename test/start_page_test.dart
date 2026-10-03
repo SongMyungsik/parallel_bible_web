@@ -42,4 +42,29 @@ void main() {
     );
     expect(tester.takeException(), isNull);
   });
+
+  testWidgets('시작 화면: 교회 로고가 [시작하기]와 버전 사이에, 다크 모드에서도 넘치지 않음', (
+    tester,
+  ) async {
+    for (final brightness in Brightness.values) {
+      tester.view.physicalSize = const Size(360, 640);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: ThemeData(brightness: brightness),
+          home: StartPage(message: '', onStart: () {}),
+        ),
+      );
+      final logo = find.byType(ChurchLogo);
+      expect(logo, findsOneWidget);
+      final logoY = tester.getCenter(logo).dy;
+      expect(tester.getCenter(find.text('시작하기')).dy, lessThan(logoY));
+      expect(
+        tester.getCenter(find.textContaining('Parallel_Bible')).dy,
+        greaterThan(logoY),
+      );
+      expect(tester.takeException(), isNull, reason: '$brightness');
+    }
+  });
 }

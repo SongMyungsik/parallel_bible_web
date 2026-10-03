@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'settings_page.dart' show appVersion;
 
 /// 앱을 켜면 나오는 시작 화면.
-///  - 위에서부터: 그림(원 안에 펼친 책과 ⇄ 화살표) · 앱 이름 · 소개 · 본문 판본 · [시작하기] · 버전
-///  - DB를 준비하는 동안에는 [시작하기] 자리에 "준비하는 중…"을 보여 주고,
+///  - 위에서부터: 그림(원 안에 펼친 책과 ⇄ 화살표) · 앱 이름 · 소개 · 본문 판본 · [시작하기] · 교회 로고 · 버전
+///    (교회 로고는 Play 스토어 앱과 구분하기 위한 웹판 표시)
+///  - 데이터를 준비하는 동안에는 [시작하기] 자리에 "준비하는 중…"을 보여 주고,
 ///    준비가 끝나면([onStart]가 생기면) 버튼이 나타납니다.
 ///  - 바탕: 앱 색상을 옅게 푼 파스텔 그라데이션 (다크 모드에서는 어두운 톤)
 class StartPage extends StatelessWidget {
@@ -66,6 +67,8 @@ class StartPage extends StatelessWidget {
                     // 버튼 자리: 준비 중 / 오류 / 시작하기
                     SizedBox(height: 72, child: Center(child: _action(theme))),
                     const SizedBox(height: 24),
+                    const ChurchLogo(),
+                    const SizedBox(height: 16),
                     Text(
                       'Parallel_Bible   ver. $appVersion',
                       style: theme.textTheme.bodySmall?.copyWith(color: muted),
@@ -123,6 +126,33 @@ class StartPage extends StatelessWidget {
         ),
       ),
       child: const Text('시작하기'),
+    );
+  }
+}
+
+/// 교회 로고 (assets/images/church_logo.png, 바탕이 투명하고 글자가 검정).
+/// 다크 모드에서는 검정 글자가 묻히지 않게 밝은 둥근 바탕 위에 둡니다.
+class ChurchLogo extends StatelessWidget {
+  const ChurchLogo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    final logo = Image.asset(
+      'assets/images/church_logo.png',
+      width: 200,
+      semanticLabel: '광은교회',
+    );
+    if (!dark) return logo;
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.92),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        child: logo,
+      ),
     );
   }
 }

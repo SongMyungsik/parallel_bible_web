@@ -60,4 +60,5 @@ flutter:
     - assets/data/ot_quotations.json
     - assets/data/koreanbible.json
     - assets/icon/app_icon.png
+    - assets/images/church_logo.png
 

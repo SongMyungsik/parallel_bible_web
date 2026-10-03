@@ -106,7 +106,8 @@ flutter build web --base-href /parallel_bible_web/
 ## 코드 구조 (lib/)
 
 - `main.dart`: 시작 화면에서 데이터 준비(설정 → 병행·인용 → 성경 본문을 메모리에) → [시작하기]를 누르면 `MainShell`.
-- `pages/start_page.dart`: 앱 켤 때 시작 화면(사용자 스케치대로: 그림 · 이름 · 소개 · 개역한글 · [시작하기] · 버전).
+- `pages/start_page.dart`: 앱 켤 때 시작 화면(사용자 스케치대로: 그림 · 이름 · 소개 · 개역한글 · [시작하기] · **교회 로고** · 버전).
+  교회 로고(`assets/images/church_logo.png`, 광은교회)는 Play 앱과 구분하는 웹판 표시. 바탕 투명·글자 검정이라 다크 모드에서는 밝은 바탕 위에.
   그림 `StartEmblem`은 코드로 그림(원 + 펼친 책 + ⇄, 앱 색상 따름). 준비 중에는 버튼 자리에 진행 표시. 버전은 `settings_page.dart`의 `appVersion`.
 - `pages/main_shell.dart`: 하단 네비 5탭(홈/성경/복음서병행/구약인용/설정). **탭마다 Navigator**를 따로 둠 → 대조 화면도 하단 네비 위에 열림.
   복음서병행·구약인용 탭을 누르면 항상 목록으로. 뒤로 가기: 탭 안 화면 닫기 → 홈 → 종료.
