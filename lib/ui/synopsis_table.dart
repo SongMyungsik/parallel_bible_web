@@ -56,7 +56,6 @@ class SynopsisRow extends StatelessWidget {
     required this.gospelCount,
     required this.refs,
     required this.onTap,
-    this.locked = false,
   });
 
   final int order;
@@ -64,9 +63,6 @@ class SynopsisRow extends StatelessWidget {
   final int gospelCount;
   final List<Map<String, Object?>> refs;
   final VoidCallback onTap;
-
-  /// 전체 열기를 구매해야 열리는 줄이면 제목 뒤에 자물쇠 표시
-  final bool locked;
 
   @override
   Widget build(BuildContext context) {
@@ -107,18 +103,6 @@ class SynopsisRow extends StatelessWidget {
                         ),
                       ),
                       TextSpan(text: title),
-                      if (locked)
-                        WidgetSpan(
-                          alignment: PlaceholderAlignment.middle,
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 4),
-                            child: Icon(
-                              Icons.lock_outline,
-                              size: 14,
-                              color: theme.colorScheme.outline,
-                            ),
-                          ),
-                        ),
                     ],
                   ),
                   style: theme.textTheme.bodyMedium?.copyWith(
@@ -218,16 +202,12 @@ class QuotationRow extends StatelessWidget {
     required this.title,
     required this.refs,
     required this.onTap,
-    this.locked = false,
   });
 
   final int order;
   final String title;
   final List<Map<String, Object?>> refs;
   final VoidCallback onTap;
-
-  /// 전체 열기를 구매해야 열리는 줄이면 제목 뒤에 자물쇠 표시
-  final bool locked;
 
   @override
   Widget build(BuildContext context) {
@@ -268,18 +248,6 @@ class QuotationRow extends StatelessWidget {
                         ),
                       ),
                       TextSpan(text: title),
-                      if (locked)
-                        WidgetSpan(
-                          alignment: PlaceholderAlignment.middle,
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 4),
-                            child: Icon(
-                              Icons.lock_outline,
-                              size: 14,
-                              color: theme.colorScheme.outline,
-                            ),
-                          ),
-                        ),
                     ],
                   ),
                   style: theme.textTheme.bodyMedium?.copyWith(

@@ -78,9 +78,6 @@ class AppSettings extends ChangeNotifier {
   final biblePosition = ValueNotifier<(String, int)>(('GEN', 1));
   final recentQuotation = ValueNotifier<RecentView?>(null);
 
-  /// "전체 열기"를 구매했는지 (결제는 state/purchase_state.dart가 맡고, 여기는 저장만)
-  bool fullUnlocked = false;
-
   /// 표를 만들고 저장된 값을 읽어 옵니다. (앱 시작 때 한 번)
   Future<void> load(Database db) async {
     _db = db;
@@ -106,7 +103,6 @@ class AppSettings extends ChangeNotifier {
     biblePosition.value = (bibleBook, bibleChapter);
     recentParallel.value = RecentView.decode(values['recent_parallel']);
     recentQuotation.value = RecentView.decode(values['recent_quotation']);
-    fullUnlocked = values['full_unlocked'] == '1';
 
     notifyListeners();
   }
@@ -146,11 +142,6 @@ class AppSettings extends ChangeNotifier {
       recentParallel.value = view;
       await _save('recent_parallel', view.encode());
     }
-  }
-
-  Future<void> setFullUnlocked(bool value) async {
-    fullUnlocked = value;
-    await _save('full_unlocked', value ? '1' : '0');
   }
 
   Future<void> _save(String key, String value) async {

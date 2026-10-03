@@ -4,11 +4,9 @@ import 'package:provider/provider.dart';
 import '../data/ref_format.dart';
 import '../data/sections.dart';
 import '../state/parallel_state.dart';
-import '../state/purchase_state.dart';
 import '../ui/gospel_colors.dart';
 import '../ui/grouped_list.dart';
 import '../ui/synopsis_table.dart';
-import '../ui/unlock_sheet.dart';
 import 'parallel_compare_page.dart';
 
 /// 복음서 병행 사건 목록.
@@ -42,26 +40,17 @@ class _ParallelListPageState extends State<ParallelListPage> {
   @override
   Widget build(BuildContext context) {
     final state = context.watch<ParallelState>();
-    // 구매하면 자물쇠가 바로 사라지도록 구매 상태도 지켜봄
-    final purchase = context.watch<PurchaseState>();
     final theme = Theme.of(context);
 
-    bool isOpen(Map<String, Object?> g) =>
-        purchase.canOpen(id: g['id'] as int, section: g['section'] as int);
-
-    final found = [
+    final items = [
       for (final g in state.groups)
-        // 잠긴 사건은 제목과 복음서 이름으로만 찾음 (구절로는 찾지 못하게)
         if (matchesQuery(_query, [
           g['title'] as String,
           formatGospelList(g['gospels'] as String?),
-          if (isOpen(g)) state.parallelSummaries[g['id']],
+          state.parallelSummaries[g['id']],
         ]))
           g,
     ];
-    // 표에는 장·절이 모두 나오므로, 표 보기에서는 열린 사건만 보여 줌 (목록 보기는 자물쇠로 표시)
-    final items = _table ? found.where(isOpen).toList() : found;
-    final hidden = found.length - items.length;
     final entries = groupEntries(
       items,
       (g) => sectionName(g['section'] as int),
@@ -125,31 +114,22 @@ class _ParallelListPageState extends State<ParallelListPage> {
                     ],
                   ),
                 ),
-                const UnlockBanner(),
                 const Divider(height: 1),
                 if (_table) const SynopsisHeaderRow(),
                 Expanded(
-                  child: entries.isEmpty && hidden == 0
+                  child: entries.isEmpty
                       ? const EmptyResult()
                       : ListView.builder(
-                          // 표에서 감춘 줄이 있으면 맨 아래에 안내 한 줄
-                          itemCount: entries.length + (hidden > 0 ? 1 : 0),
+                          itemCount: entries.length,
                           itemBuilder: (context, i) {
-                            if (i == entries.length) {
-                              return HiddenRowsNote(
-                                count: hidden,
-                                unit: '개 사건',
-                              );
-                            }
                             final e = entries[i];
                             if (e.isHeader) {
                               return SectionHeader(e.header!, e.count);
                             }
                             final g = e.item!;
-                            final locked = !isOpen(g);
                             return _table
-                                ? _row(context, state, g, locked)
-                                : _tile(context, theme, g, locked);
+                                ? _row(context, state, g)
+                                : _tile(context, theme, g);
                           },
                         ),
                 ),
@@ -159,8 +139,6 @@ class _ParallelListPageState extends State<ParallelListPage> {
   }
 
   void _openCompare(BuildContext context, int id, String title) {
-    // 잠긴 사건이면 대조 화면 대신 "전체 열기" 안내
-    if (!ensureOpen(context, id)) return;
     Navigator.of(context).push(
       MaterialPageRoute<void>(
         builder: (_) => ParallelComparePage(groupId: id, title: title),
@@ -173,7 +151,6 @@ class _ParallelListPageState extends State<ParallelListPage> {
     BuildContext context,
     ParallelState state,
     Map<String, Object?> g,
-    bool locked,
   ) {
     final id = g['id'] as int;
     final title = g['title'] as String;
@@ -182,7 +159,6 @@ class _ParallelListPageState extends State<ParallelListPage> {
       title: title,
       gospelCount: g['gospel_count'] as int,
       refs: state.parallelRefs[id] ?? const [],
-      locked: locked,
       onTap: () => _openCompare(context, id, title),
     );
   }
@@ -191,7 +167,6 @@ class _ParallelListPageState extends State<ParallelListPage> {
     BuildContext context,
     ThemeData theme,
     Map<String, Object?> g,
-    bool locked,
   ) {
     final id = g['id'] as int;
     final title = g['title'] as String;
@@ -216,7 +191,7 @@ class _ParallelListPageState extends State<ParallelListPage> {
             formatGospelList(g['gospels'] as String?),
             style: theme.textTheme.bodySmall,
           ),
-          trailing: Icon(locked ? Icons.lock_outline : Icons.chevron_right),
+          trailing: const Icon(Icons.chevron_right),
           onTap: () => _openCompare(context, id, title),
         ),
         const Divider(height: 1),

@@ -3,16 +3,14 @@ import 'package:provider/provider.dart';
 
 import '../state/app_settings.dart';
 import '../state/parallel_state.dart';
-import '../state/purchase_state.dart';
 import '../ui/gospel_colors.dart';
-import '../ui/unlock_sheet.dart';
 
 /// 앱 버전 (pubspec.yaml의 version과 맞춰 주세요)
 const String appVersion = '1.0.0';
 
 /// 설정 화면. 위쪽 탭(좌우로 밀어서도 이동)으로 두 쪽을 나눕니다.
 ///  - 앱 정보: 앱 설명, 기능 안내, 본문 판본, 버전
-///  - 설정: 전체 열기(구매), 화면 모드, 앱 색상
+///  - 설정: 화면 모드, 앱 색상
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
 
@@ -140,36 +138,17 @@ class _AppInfoTab extends StatelessWidget {
   }
 }
 
-/// "설정" 쪽: 전체 열기(구매), 화면 모드, 앱 색상
+/// "설정" 쪽: 화면 모드, 앱 색상
 class _OptionsTab extends StatelessWidget {
   const _OptionsTab();
 
   @override
   Widget build(BuildContext context) {
     final settings = context.watch<AppSettings>();
-    final purchase = context.watch<PurchaseState>();
 
     return ListView(
       padding: const EdgeInsets.only(bottom: 24),
       children: [
-        // ---- 전체 열기 (구매 · 구매 복원 · 구매 상태) ----
-        const _SectionTitle('전체 열기'),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
-          child: Card(
-            margin: EdgeInsets.zero,
-            child: Padding(padding: EdgeInsets.all(16), child: UnlockPanel()),
-          ),
-        ),
-        // Play 결제가 없는 기기(Windows 등 개발용)에서만: 잠금을 직접 바꿔 화면 확인
-        if (!purchase.storeSupported)
-          SwitchListTile(
-            title: const Text('개발용: 전체 열림'),
-            subtitle: const Text('이 기기에는 Play 결제가 없어 직접 바꿉니다.'),
-            value: purchase.unlocked,
-            onChanged: purchase.setUnlockedForDev,
-          ),
-
         // ---- 화면 모드 ----
         const _SectionTitle('화면 모드'),
         Padding(

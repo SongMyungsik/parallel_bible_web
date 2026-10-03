@@ -16,7 +16,6 @@ import 'pages/start_page.dart';
 import 'state/app_navigation.dart';
 import 'state/app_settings.dart';
 import 'state/parallel_state.dart';
-import 'state/purchase_state.dart';
 
 void main() {
   // rootBundle(JSON 읽기)을 쓰려면 꼭 필요합니다.
@@ -119,10 +118,6 @@ class _ParallelViewerAppState extends State<ParallelViewerApp> {
             ChangeNotifierProvider.value(value: _settings),
             // 화면끼리 주고받는 이동 요청 (대조 화면 → 성경)
             ChangeNotifierProvider(create: (_) => AppNavigation()),
-            // "전체 열기" 구매 상태 (앱을 켤 때 Play 스토어에 이전 구매를 확인)
-            ChangeNotifierProvider(
-              create: (_) => PurchaseState(_settings)..init(),
-            ),
             ChangeNotifierProvider(
               create: (_) => ParallelState(db)..loadGroups(),
             ),

@@ -4,8 +4,6 @@ import 'package:provider/provider.dart';
 import '../data/ref_format.dart';
 import '../state/app_settings.dart';
 import '../state/parallel_state.dart';
-import '../state/purchase_state.dart';
-import '../ui/unlock_sheet.dart';
 
 /// 홈 화면: 앱 소개 + 성경 / 복음서 병행 / 구약 인용으로 가는 카드.
 /// 카드를 누르면 직전에 보던 내용이 열립니다.
@@ -24,7 +22,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final state = context.watch<ParallelState>();
     final settings = context.read<AppSettings>();
-    final unlocked = context.watch<PurchaseState>().unlocked;
     final theme = Theme.of(context);
 
     return Scaffold(
@@ -76,14 +73,6 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          // 구매 전에만: 무료 미리보기 안내 → 누르면 "전체 열기" 창
-          if (!unlocked) ...[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: const UnlockBanner(),
-            ),
-            const SizedBox(height: 12),
-          ],
           // 성경: 읽던 장 (장을 넘길 때마다 글자가 바뀜)
           ValueListenableBuilder<(String, int)>(
             valueListenable: settings.biblePosition,

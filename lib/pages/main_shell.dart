@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 
 import '../state/app_navigation.dart';
 import '../state/app_settings.dart';
-import '../ui/unlock_sheet.dart';
 
 import 'bible_page.dart';
 import 'home_page.dart';
@@ -75,8 +74,6 @@ class _MainShellState extends State<MainShell> {
     if (navigator == null) return;
     navigator.popUntil((route) => route.isFirst);
     setState(() => _index = index);
-    // 잠긴 묶음이면(구매 전) 목록만 보여 주고 "전체 열기" 안내
-    if (!ensureOpen(context, view.id)) return;
     navigator.push(
       MaterialPageRoute<void>(
         builder: (_) => ParallelComparePage(

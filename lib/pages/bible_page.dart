@@ -6,9 +6,7 @@ import '../data/ref_format.dart';
 import '../state/app_navigation.dart';
 import '../state/app_settings.dart';
 import '../state/parallel_state.dart';
-import '../state/purchase_state.dart';
 import '../ui/gospel_colors.dart';
-import '../ui/unlock_sheet.dart';
 import 'parallel_compare_page.dart';
 
 /// 성경 읽기 화면.
@@ -194,8 +192,6 @@ class _BiblePageState extends State<BiblePage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    // 구매하면 칩의 자물쇠가 바로 사라지도록 구매 상태를 지켜봄
-    context.watch<PurchaseState>();
     final prev = _prev;
     final next = _next;
 
@@ -519,11 +515,8 @@ class _BiblePageState extends State<BiblePage> {
         ? theme.colorScheme.secondaryContainer
         : gospelCountColor(m.gospelCount, alpha: 0.35);
     return ActionChip(
-      // 잠긴 묶음(전체 열기 전)은 자물쇠로 표시
       avatar: Icon(
-        !isGroupOpen(context, m.groupId)
-            ? Icons.lock_outline
-            : (m.quotation ? Icons.format_quote : Icons.view_column),
+        m.quotation ? Icons.format_quote : Icons.view_column,
         size: 16,
       ),
       label: Text('${m.quotation ? '인용' : '병행'} · ${m.title}'),
@@ -535,8 +528,6 @@ class _BiblePageState extends State<BiblePage> {
       visualDensity: VisualDensity.compact,
       tooltip: m.quotation ? '구약 인용 대조 보기' : '복음서 병행 대조 보기',
       onPressed: () {
-        // 잠긴 묶음이면 대조 화면 대신 "전체 열기" 안내
-        if (!ensureOpen(context, m.groupId)) return;
         // 성경 탭 안에서 대조 화면을 엶 (뒤로 가면 읽던 자리로)
         Navigator.of(context).push(
           MaterialPageRoute<void>(

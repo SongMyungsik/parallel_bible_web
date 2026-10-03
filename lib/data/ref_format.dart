@@ -244,12 +244,3 @@ String formatRefsSummary(List<Map<String, Object?>> refs) {
     for (final list in byBook.values) formatRefs(list, short: true),
   ].join(' · ');
 }
-
-/// 장·절 없이 책 이름만 요약합니다. (잠긴 항목: 어느 책인지만 보여 주고 구절은 숨김)
-/// 예: "마태 · 이사야", "로마서 · 갈라디아서 · 하박국"
-String formatBooksSummary(List<Map<String, Object?>> refs) {
-  final codes = <String>{for (final r in refs) r['book'] as String};
-  return [
-    for (final code in codes) _gospelShortNames[code] ?? bookName(code),
-  ].join(' · ');
-}

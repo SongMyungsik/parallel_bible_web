@@ -38,12 +38,6 @@ class ParallelState extends ChangeNotifier {
   /// 구약 인용 id → 인용한 첫 구약 본문 위치
   Map<int, OtPosition> quotationOt = {};
 
-  /// 묶음 id → 생애 단계·책 소제목 번호 (무료 범위 판단용)
-  final Map<int, int> _sections = {};
-
-  /// 이 묶음의 section 번호. 모르는 id면 0.
-  int sectionOf(int id) => _sections[id] ?? 0;
-
   bool loading = true;
 
   Future<void> loadGroups() async {
@@ -52,13 +46,6 @@ class ParallelState extends ChangeNotifier {
       db,
       PassageCollection.quotation,
     );
-
-    _sections
-      ..clear()
-      ..addAll({
-        for (final g in [...groups, ...quotations])
-          g['id'] as int: g['section'] as int,
-      });
 
     final parRefs = await ParallelImporter.getRefsOfCollection(
       db,
