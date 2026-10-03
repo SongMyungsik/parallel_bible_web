@@ -14,7 +14,19 @@
      (GitHub 계정 SongMyungsik, `gh` 로그인되어 있음. 저장소 만들기·올리기는 사용자 확인 후).
 - 유료 Play 앱과 내용이 겹치므로, 링크는 교회 안에서만 나눈다는 전제(사용자가 아들과 상의).
 
-## 작업 계획 (새 세션에서 여기부터)
+## 진행 상황 (2026-10-03)
+- ✅ 1 정리: `promo/`·`android/`·`koreanbible.csv` 삭제(windows는 확인용으로 남김). 앱 이름은 "병행 구절 대조" 그대로("웹판" 표시 안 함).
+- ✅ 2 잠금 제거: 관련 파일·테스트 삭제, `in_app_purchase` 삭제.
+- ✅ 3 웹 동작(방법 A): `lib/data/passage_data.dart`(병행·인용, 예전 SQL과 같은 모양의 줄을 메모리에서 만듦),
+  `lib/data/memory_bible_text_source.dart`(본문), 설정은 `shared_preferences`. sqflite·path·dart:io 없음. 패키지 이름 `parallel_bible_web`.
+- ✅ 4 웹 꾸미기: `web/index.html`(불러오는 화면, `web/flutter_bootstrap.js`에서 지움)·`manifest.json`, 아이콘은 `python tool/make_app_icon.py`.
+  한글 글꼴은 Flutter 웹이 자동으로 Noto Sans KR을 내려받음(따로 넣지 않음).
+- ⏳ 5 배포: `.github/workflows/deploy.yml` 준비됨(main에 올리면 빌드→Pages). 저장소 만들기·올리기는 사용자 확인 후.
+  저장소 설정 Pages → Source: GitHub Actions.
+- ⏳ 6 폰 확인·사용 안내문.
+- git: 로컬 저장소만 있음(`git init`). 줄 끝 LF(`core.autocrlf false`).
+
+## 작업 계획 (처음 세운 계획, 위 진행 상황 참고)
 1. **정리**: Play·Android 출시 전용 자료 빼기 — `promo/store/`, `promo/screenshots/`, 홍보 포스터 등은 필요 없으면 지우기(사용자에게 물어보기).
    `koreanbible.csv`(예전 신약 원본, 이미 반영됨)는 지워도 됨. `android/`·`windows/` 폴더는 남겨 둬도 되고(개발 중 Windows로 확인용),
    웹만 쓸 거면 나중에 정리. 앱 이름에 "웹판" 표시를 넣을지 사용자에게 물어보기.
@@ -62,7 +74,7 @@ flutter build web --base-href /parallel_bible_web/
 | `ot_quotations.json` | 신약의 구약 인용 204개: 복음서 66개 (id 1001~1066), 사도행전 25개 (1067~1091), 바울 서신 67개 (1092~1158), 히브리서 23개 (1159~1181), 공동 서신·계시록 23개 (1182~1204) |
 
 - 개역개정은 저작권 문제로 쓰지 않음. 개역한글만 사용.
-- 본문 가공(가져올 때 `lib/data/bible_importer.dart`에서):
+- 본문 가공(읽을 때 `lib/data/memory_bible_text_source.dart`에서):
   - `(없음)…` 표시 → `[없음] …` (사본에 따라 없는 절, 예: 마 17:21). 13절의 본문은 예전 신약 파일 `koreanbible.csv`에서 채움.
   - 시편 1절 앞 `[다윗의 시…]` 표제 → 소제목(heading)으로 분리.
   - 개역한글은 소제목이 없고 괄호가 본문의 일부이므로 괄호 소제목 떼기는 꺼 둠(`_extractHeadings = false`).
@@ -81,8 +93,8 @@ flutter build web --base-href /parallel_bible_web/
   - id는 바꾸지 않음(홈의 "이어 보기", 성경 칩이 id로 연결됨).
 
 ### ⚠ 데이터를 고칠 때 반드시
-- **JSON을 고치면 그 파일의 `"version"`을 올릴 것.** 올리지 않으면 이미 설치된 앱의 DB에 반영되지 않음.
-- 성경 본문을 바꾸면 `BibleImporter.dataVersion`을 올릴 것 (현재 5).
+- 웹판은 DB 없이 켤 때마다 JSON을 읽으므로 고치면 바로 반영됨. `"version"`은 도구(assign_order.py)가 올리는 대로 둠(원본 앱과 맞추기용).
+- 본문 가공은 `lib/data/memory_bible_text_source.dart`의 `parseBible`.
 - 사건·인용을 추가한 뒤 `python tool/assign_order.py --write` → 생애 단계(section)와 순서(order)를 다시 매기고 version도 올려 줌.
   인자 없이 실행하면 단계별 목록만 출력(검토용).
 - 새 절 범위는 성경 본문과 대조해 검사 후 넣을 것 (`tool/history/`의 스크립트 방식 참고: 시작·끝 절 본문을 출력해 제목과 맞는지 확인).
@@ -92,7 +104,7 @@ flutter build web --base-href /parallel_bible_web/
 
 ## 코드 구조 (lib/)
 
-- `main.dart`: 시작 화면에서 DB 준비(설정 → 병행·인용 → 성경 본문 가져오기) → [시작하기]를 누르면 `MainShell`.
+- `main.dart`: 시작 화면에서 데이터 준비(설정 → 병행·인용 → 성경 본문을 메모리에) → [시작하기]를 누르면 `MainShell`.
 - `pages/start_page.dart`: 앱 켤 때 시작 화면(사용자 스케치대로: 그림 · 이름 · 소개 · 개역한글 · [시작하기] · 버전).
   그림 `StartEmblem`은 코드로 그림(원 + 펼친 책 + ⇄, 앱 색상 따름). 준비 중에는 버튼 자리에 진행 표시. 버전은 `settings_page.dart`의 `appVersion`.
 - `pages/main_shell.dart`: 하단 네비 5탭(홈/성경/복음서병행/구약인용/설정). **탭마다 Navigator**를 따로 둠 → 대조 화면도 하단 네비 위에 열림.
@@ -103,9 +115,10 @@ flutter build web --base-href /parallel_bible_web/
 - `pages/home_page.dart`: 카드 → 직전 내용(읽던 장, 마지막으로 본 대조 화면).
 - `pages/settings_page.dart`: `앱 정보 | 설정` 탭. 화면 모드(시스템/라이트/다크), 앱 색상 5가지(인디고·초록·와인·갈색·먹색, 예전 색 이름은 `fromName`에서 같은 계열로 바꿈).
 - `logic/word_matcher.dart`: **연속 두 단어**가 서로 다른 책에 나오면 공통 표현. 한국어 조사 차이는 앞부분 일치로 허용. `[없음]` 같은 대괄호 표시는 비교 안 함.
-- `data/parallel_importer.dart`: JSON → SQLite(`passage_group`, `passage_ref`). `PassageCollection.parallel / quotation`.
-- `state/`: `ParallelState`(목록), `AppSettings`(설정·최근 본 것, DB `app_settings` 표에 저장), `AppNavigation`(대조 화면 → 성경 이동 요청).
-- `ui/`: `gospel_colors.dart`(색 규칙), `grouped_list.dart`(소제목·검색), `synopsis_table.dart`(대조표), `unlock_sheet.dart`(전체 열기 안내).
+- `data/passage_data.dart`: JSON → 메모리(묶음 줄·구절 줄, 검사 포함). `PassageCollection.parallel / quotation`.
+- `data/memory_bible_text_source.dart`: 성경 본문 JSON → 메모리 (`BibleTextSource` 구현).
+- `state/`: `ParallelState`(목록), `AppSettings`(설정·최근 본 것, `shared_preferences` = 웹은 localStorage), `AppNavigation`(대조 화면 → 성경 이동 요청).
+- `ui/`: `gospel_colors.dart`(색 규칙), `grouped_list.dart`(소제목·검색), `synopsis_table.dart`(대조표). 
 
 ## 색 규칙
 - 몇 복음서 공통인지: **네 = 보라, 세 = 초록, 두 = 파랑** (`ui/gospel_colors.dart` 한 곳에서 정의).
@@ -115,6 +128,6 @@ flutter build web --base-href /parallel_bible_web/
 
 ## 도구 (tool/)
 - `assign_order.py`: 생애 단계·순서 매기기 (위 참고). 마태 순서 기준, 없으면 병행 묶음을 다리로 위치 계산, 어색한 곳은 `OVERRIDE`.
-- `make_app_icon.py`: 앱 아이콘(펼친 성경 양쪽 페이지의 같은 줄을 같은 색으로) → assets, Android mipmap(적응형 포함), Windows ico 생성.
+- `make_app_icon.py`: 앱 아이콘(펼친 성경 양쪽 페이지의 같은 줄을 같은 색으로) → assets, web(favicon·192·512·maskable·apple-touch-icon), Windows ico 생성.
 - `history/`: 이미 반영된 데이터 생성 스크립트(다시 실행 금지, 참고용).
 

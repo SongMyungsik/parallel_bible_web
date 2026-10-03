@@ -1,17 +1,15 @@
-# parallel_viewer
+# 병행 구절 대조 · 웹판
 
-A new Flutter project.
+복음서의 병행 본문과 신약이 인용한 구약 본문을 나란히 놓고, 같은 표현을 색으로 비교합니다. (개역한글)
 
-## Getting Started
+- 주소: https://songmyungsik.github.io/parallel_bible_web/
+- 안드로이드(크롬)·아이폰(사파리)에서 열고 "홈 화면에 추가"하면 앱처럼 쓸 수 있습니다.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 개발
+```bash
+flutter analyze
+flutter test
+flutter run -d chrome
+flutter build web --base-href /parallel_bible_web/
+```
+`main` 브랜치에 올리면 GitHub Actions(`.github/workflows/deploy.yml`)가 빌드해서 GitHub Pages에 올립니다.
