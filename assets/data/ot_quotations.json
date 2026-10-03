@@ -1,0 +1,2191 @@
+{
+  "version": 7,
+  "groups": [
+    {
+      "id": 1001,
+      "title": "처녀가 잉태하여 (임마누엘)",
+      "section": 1,
+      "order": 1,
+      "refs": [
+        { "book": "MAT", "chapter": 1, "verse_start": 22, "verse_end": 23 },
+        { "book": "ISA", "chapter": 7, "verse_start": 14, "verse_end": 14 }
+      ]
+    },
+    {
+      "id": 1002,
+      "title": "유대 땅 베들레헴아",
+      "section": 1,
+      "order": 2,
+      "refs": [
+        { "book": "MAT", "chapter": 2, "verse_start": 5, "verse_end": 6 },
+        { "book": "JHN", "chapter": 7, "verse_start": 42, "verse_end": 42 },
+        { "book": "MIC", "chapter": 5, "verse_start": 2, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1003,
+      "title": "애굽에서 내 아들을 불렀다",
+      "section": 1,
+      "order": 3,
+      "refs": [
+        { "book": "MAT", "chapter": 2, "verse_start": 15, "verse_end": 15 },
+        { "book": "HOS", "chapter": 11, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1004,
+      "title": "라마에서 슬퍼하는 소리",
+      "section": 1,
+      "order": 4,
+      "refs": [
+        { "book": "MAT", "chapter": 2, "verse_start": 17, "verse_end": 18 },
+        { "book": "JER", "chapter": 31, "verse_start": 15, "verse_end": 15 }
+      ]
+    },
+    {
+      "id": 1005,
+      "title": "광야에서 외치는 자의 소리",
+      "section": 1,
+      "order": 6,
+      "refs": [
+        { "book": "MAT", "chapter": 3, "verse_start": 3, "verse_end": 3 },
+        { "book": "MRK", "chapter": 1, "verse_start": 3, "verse_end": 3 },
+        { "book": "LUK", "chapter": 3, "verse_start": 4, "verse_end": 6 },
+        { "book": "JHN", "chapter": 1, "verse_start": 23, "verse_end": 23 },
+        { "book": "ISA", "chapter": 40, "verse_start": 3, "verse_end": 5 }
+      ]
+    },
+    {
+      "id": 1006,
+      "title": "내 사자를 네 앞에 보내노니",
+      "section": 2,
+      "order": 22,
+      "refs": [
+        { "book": "MAT", "chapter": 11, "verse_start": 10, "verse_end": 10 },
+        { "book": "MRK", "chapter": 1, "verse_start": 2, "verse_end": 2 },
+        { "book": "LUK", "chapter": 7, "verse_start": 27, "verse_end": 27 },
+        { "book": "MAL", "chapter": 3, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1007,
+      "title": "사람이 떡으로만 살 것이 아니요",
+      "section": 1,
+      "order": 7,
+      "refs": [
+        { "book": "MAT", "chapter": 4, "verse_start": 4, "verse_end": 4 },
+        { "book": "LUK", "chapter": 4, "verse_start": 4, "verse_end": 4 },
+        { "book": "DEU", "chapter": 8, "verse_start": 3, "verse_end": 3 }
+      ]
+    },
+    {
+      "id": 1008,
+      "title": "저희가 손으로 너를 받들어",
+      "section": 1,
+      "order": 8,
+      "refs": [
+        { "book": "MAT", "chapter": 4, "verse_start": 6, "verse_end": 6 },
+        { "book": "LUK", "chapter": 4, "verse_start": 10, "verse_end": 11 },
+        { "book": "PSA", "chapter": 91, "verse_start": 11, "verse_end": 12 }
+      ]
+    },
+    {
+      "id": 1009,
+      "title": "주 너의 하나님을 시험하지 말라",
+      "section": 1,
+      "order": 9,
+      "refs": [
+        { "book": "MAT", "chapter": 4, "verse_start": 7, "verse_end": 7 },
+        { "book": "LUK", "chapter": 4, "verse_start": 12, "verse_end": 12 },
+        { "book": "DEU", "chapter": 6, "verse_start": 16, "verse_end": 16 }
+      ]
+    },
+    {
+      "id": 1010,
+      "title": "주 너의 하나님께 경배하라",
+      "section": 1,
+      "order": 10,
+      "refs": [
+        { "book": "MAT", "chapter": 4, "verse_start": 10, "verse_end": 10 },
+        { "book": "LUK", "chapter": 4, "verse_start": 8, "verse_end": 8 },
+        { "book": "DEU", "chapter": 6, "verse_start": 13, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1011,
+      "title": "스불론과 납달리 땅, 흑암에 앉은 백성",
+      "section": 2,
+      "order": 11,
+      "refs": [
+        { "book": "MAT", "chapter": 4, "verse_start": 14, "verse_end": 16 },
+        { "book": "ISA", "chapter": 9, "verse_start": 1, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1012,
+      "title": "주의 성령이 내게 임하셨으니",
+      "section": 2,
+      "order": 27,
+      "refs": [
+        { "book": "LUK", "chapter": 4, "verse_start": 18, "verse_end": 19 },
+        { "book": "ISA", "chapter": 61, "verse_start": 1, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1013,
+      "title": "살인하지 말라",
+      "section": 2,
+      "order": 13,
+      "refs": [
+        { "book": "MAT", "chapter": 5, "verse_start": 21, "verse_end": 21 },
+        { "book": "EXO", "chapter": 20, "verse_start": 13, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1014,
+      "title": "간음하지 말라",
+      "section": 2,
+      "order": 14,
+      "refs": [
+        { "book": "MAT", "chapter": 5, "verse_start": 27, "verse_end": 27 },
+        { "book": "EXO", "chapter": 20, "verse_start": 14, "verse_end": 14 }
+      ]
+    },
+    {
+      "id": 1015,
+      "title": "이혼 증서를 줄 것이라",
+      "section": 2,
+      "order": 15,
+      "refs": [
+        { "book": "MAT", "chapter": 5, "verse_start": 31, "verse_end": 31 },
+        { "book": "MAT", "chapter": 19, "verse_start": 7, "verse_end": 7 },
+        { "book": "MRK", "chapter": 10, "verse_start": 4, "verse_end": 4 },
+        { "book": "DEU", "chapter": 24, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1016,
+      "title": "헛 맹세를 하지 말라",
+      "section": 2,
+      "order": 16,
+      "refs": [
+        { "book": "MAT", "chapter": 5, "verse_start": 33, "verse_end": 33 },
+        { "book": "LEV", "chapter": 19, "verse_start": 12, "verse_end": 12 }
+      ]
+    },
+    {
+      "id": 1017,
+      "title": "눈은 눈으로, 이는 이로",
+      "section": 2,
+      "order": 17,
+      "refs": [
+        { "book": "MAT", "chapter": 5, "verse_start": 38, "verse_end": 38 },
+        { "book": "EXO", "chapter": 21, "verse_start": 24, "verse_end": 24 }
+      ]
+    },
+    {
+      "id": 1018,
+      "title": "네 이웃을 사랑하라 (산상 설교)",
+      "section": 2,
+      "order": 18,
+      "refs": [
+        { "book": "MAT", "chapter": 5, "verse_start": 43, "verse_end": 43 },
+        { "book": "LEV", "chapter": 19, "verse_start": 18, "verse_end": 18 }
+      ]
+    },
+    {
+      "id": 1019,
+      "title": "우리 연약한 것을 친히 담당하시고",
+      "section": 2,
+      "order": 19,
+      "refs": [
+        { "book": "MAT", "chapter": 8, "verse_start": 17, "verse_end": 17 },
+        { "book": "ISA", "chapter": 53, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1020,
+      "title": "나는 긍휼을 원하고 제사를 원치 아니하노라",
+      "section": 2,
+      "order": 20,
+      "refs": [
+        { "book": "MAT", "chapter": 9, "verse_start": 13, "verse_end": 13 },
+        { "book": "MAT", "chapter": 12, "verse_start": 7, "verse_end": 7 },
+        { "book": "HOS", "chapter": 6, "verse_start": 6, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1021,
+      "title": "사람의 원수가 자기 집안 식구리라",
+      "section": 2,
+      "order": 21,
+      "refs": [
+        { "book": "MAT", "chapter": 10, "verse_start": 35, "verse_end": 36 },
+        { "book": "LUK", "chapter": 12, "verse_start": 53, "verse_end": 53 },
+        { "book": "MIC", "chapter": 7, "verse_start": 6, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1022,
+      "title": "보라 나의 택한 종",
+      "section": 2,
+      "order": 23,
+      "refs": [
+        { "book": "MAT", "chapter": 12, "verse_start": 17, "verse_end": 21 },
+        { "book": "ISA", "chapter": 42, "verse_start": 1, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1023,
+      "title": "요나가 밤낮 사흘을 큰 물고기 뱃속에",
+      "section": 2,
+      "order": 24,
+      "refs": [
+        { "book": "MAT", "chapter": 12, "verse_start": 40, "verse_end": 40 },
+        { "book": "JON", "chapter": 1, "verse_start": 17, "verse_end": 17 }
+      ]
+    },
+    {
+      "id": 1024,
+      "title": "듣기는 들어도 깨닫지 못하리라",
+      "section": 2,
+      "order": 25,
+      "refs": [
+        { "book": "MAT", "chapter": 13, "verse_start": 14, "verse_end": 15 },
+        { "book": "MRK", "chapter": 4, "verse_start": 12, "verse_end": 12 },
+        { "book": "LUK", "chapter": 8, "verse_start": 10, "verse_end": 10 },
+        { "book": "JHN", "chapter": 12, "verse_start": 39, "verse_end": 40 },
+        { "book": "ISA", "chapter": 6, "verse_start": 9, "verse_end": 10 }
+      ]
+    },
+    {
+      "id": 1025,
+      "title": "내가 입을 열어 비유로 말하고",
+      "section": 2,
+      "order": 26,
+      "refs": [
+        { "book": "MAT", "chapter": 13, "verse_start": 35, "verse_end": 35 },
+        { "book": "PSA", "chapter": 78, "verse_start": 2, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1026,
+      "title": "부모를 공경하라",
+      "section": 2,
+      "order": 30,
+      "refs": [
+        { "book": "MAT", "chapter": 15, "verse_start": 4, "verse_end": 4 },
+        { "book": "MRK", "chapter": 7, "verse_start": 10, "verse_end": 10 },
+        { "book": "EXO", "chapter": 20, "verse_start": 12, "verse_end": 12 },
+        { "book": "EXO", "chapter": 21, "verse_start": 17, "verse_end": 17 }
+      ]
+    },
+    {
+      "id": 1027,
+      "title": "입술로는 나를 존경하되",
+      "section": 2,
+      "order": 31,
+      "refs": [
+        { "book": "MAT", "chapter": 15, "verse_start": 8, "verse_end": 9 },
+        { "book": "MRK", "chapter": 7, "verse_start": 6, "verse_end": 7 },
+        { "book": "ISA", "chapter": 29, "verse_start": 13, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1028,
+      "title": "엘리야가 먼저 와서",
+      "section": 3,
+      "order": 33,
+      "refs": [
+        { "book": "MAT", "chapter": 17, "verse_start": 10, "verse_end": 11 },
+        { "book": "MRK", "chapter": 9, "verse_start": 11, "verse_end": 12 },
+        { "book": "LUK", "chapter": 1, "verse_start": 17, "verse_end": 17 },
+        { "book": "MAL", "chapter": 4, "verse_start": 5, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1029,
+      "title": "두세 증인의 입으로",
+      "section": 3,
+      "order": 35,
+      "refs": [
+        { "book": "MAT", "chapter": 18, "verse_start": 16, "verse_end": 16 },
+        { "book": "DEU", "chapter": 19, "verse_start": 15, "verse_end": 15 }
+      ]
+    },
+    {
+      "id": 1030,
+      "title": "남자와 여자로 지으시고 둘이 한 몸이 될지니라",
+      "section": 3,
+      "order": 36,
+      "refs": [
+        { "book": "MAT", "chapter": 19, "verse_start": 4, "verse_end": 5 },
+        { "book": "MRK", "chapter": 10, "verse_start": 6, "verse_end": 8 },
+        { "book": "GEN", "chapter": 1, "verse_start": 27, "verse_end": 27 },
+        { "book": "GEN", "chapter": 2, "verse_start": 24, "verse_end": 24 }
+      ]
+    },
+    {
+      "id": 1031,
+      "title": "계명을 네가 아나니",
+      "section": 3,
+      "order": 37,
+      "refs": [
+        { "book": "MAT", "chapter": 19, "verse_start": 18, "verse_end": 19 },
+        { "book": "MRK", "chapter": 10, "verse_start": 19, "verse_end": 19 },
+        { "book": "LUK", "chapter": 18, "verse_start": 20, "verse_end": 20 },
+        { "book": "EXO", "chapter": 20, "verse_start": 12, "verse_end": 16 }
+      ]
+    },
+    {
+      "id": 1032,
+      "title": "시온 딸에게 이르라, 네 왕이 나귀를 타고",
+      "section": 4,
+      "order": 38,
+      "refs": [
+        { "book": "MAT", "chapter": 21, "verse_start": 4, "verse_end": 5 },
+        { "book": "JHN", "chapter": 12, "verse_start": 14, "verse_end": 15 },
+        { "book": "ZEC", "chapter": 9, "verse_start": 9, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1033,
+      "title": "찬송하리로다 주의 이름으로 오는 이여",
+      "section": 4,
+      "order": 39,
+      "refs": [
+        { "book": "MAT", "chapter": 21, "verse_start": 9, "verse_end": 9 },
+        { "book": "MRK", "chapter": 11, "verse_start": 9, "verse_end": 10 },
+        { "book": "LUK", "chapter": 19, "verse_start": 38, "verse_end": 38 },
+        { "book": "JHN", "chapter": 12, "verse_start": 13, "verse_end": 13 },
+        { "book": "PSA", "chapter": 118, "verse_start": 25, "verse_end": 26 }
+      ]
+    },
+    {
+      "id": 1034,
+      "title": "주의 이름으로 오는 이여 (예루살렘 탄식)",
+      "section": 4,
+      "order": 49,
+      "refs": [
+        { "book": "MAT", "chapter": 23, "verse_start": 39, "verse_end": 39 },
+        { "book": "LUK", "chapter": 13, "verse_start": 35, "verse_end": 35 },
+        { "book": "PSA", "chapter": 118, "verse_start": 26, "verse_end": 26 }
+      ]
+    },
+    {
+      "id": 1035,
+      "title": "내 집은 기도하는 집",
+      "section": 4,
+      "order": 40,
+      "refs": [
+        { "book": "MAT", "chapter": 21, "verse_start": 13, "verse_end": 13 },
+        { "book": "MRK", "chapter": 11, "verse_start": 17, "verse_end": 17 },
+        { "book": "LUK", "chapter": 19, "verse_start": 46, "verse_end": 46 },
+        { "book": "ISA", "chapter": 56, "verse_start": 7, "verse_end": 7 },
+        { "book": "JER", "chapter": 7, "verse_start": 11, "verse_end": 11 }
+      ]
+    },
+    {
+      "id": 1036,
+      "title": "어린 아기와 젖먹이의 입에서",
+      "section": 4,
+      "order": 41,
+      "refs": [
+        { "book": "MAT", "chapter": 21, "verse_start": 16, "verse_end": 16 },
+        { "book": "PSA", "chapter": 8, "verse_start": 2, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1037,
+      "title": "건축자의 버린 돌",
+      "section": 4,
+      "order": 44,
+      "refs": [
+        { "book": "MAT", "chapter": 21, "verse_start": 42, "verse_end": 42 },
+        { "book": "MRK", "chapter": 12, "verse_start": 10, "verse_end": 11 },
+        { "book": "LUK", "chapter": 20, "verse_start": 17, "verse_end": 17 },
+        { "book": "PSA", "chapter": 118, "verse_start": 22, "verse_end": 23 }
+      ]
+    },
+    {
+      "id": 1038,
+      "title": "형이 자식이 없이 죽으면",
+      "section": 4,
+      "order": 45,
+      "refs": [
+        { "book": "MAT", "chapter": 22, "verse_start": 24, "verse_end": 24 },
+        { "book": "MRK", "chapter": 12, "verse_start": 19, "verse_end": 19 },
+        { "book": "LUK", "chapter": 20, "verse_start": 28, "verse_end": 28 },
+        { "book": "DEU", "chapter": 25, "verse_start": 5, "verse_end": 5 }
+      ]
+    },
+    {
+      "id": 1039,
+      "title": "나는 아브라함의 하나님이요",
+      "section": 4,
+      "order": 46,
+      "refs": [
+        { "book": "MAT", "chapter": 22, "verse_start": 32, "verse_end": 32 },
+        { "book": "MRK", "chapter": 12, "verse_start": 26, "verse_end": 26 },
+        { "book": "LUK", "chapter": 20, "verse_start": 37, "verse_end": 37 },
+        { "book": "EXO", "chapter": 3, "verse_start": 6, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1040,
+      "title": "마음을 다하여 하나님을 사랑하라",
+      "section": 4,
+      "order": 47,
+      "refs": [
+        { "book": "MAT", "chapter": 22, "verse_start": 37, "verse_end": 39 },
+        { "book": "MRK", "chapter": 12, "verse_start": 29, "verse_end": 31 },
+        { "book": "LUK", "chapter": 10, "verse_start": 27, "verse_end": 27 },
+        { "book": "DEU", "chapter": 6, "verse_start": 4, "verse_end": 5 },
+        { "book": "LEV", "chapter": 19, "verse_start": 18, "verse_end": 18 }
+      ]
+    },
+    {
+      "id": 1041,
+      "title": "주께서 내 주께 이르시되",
+      "section": 4,
+      "order": 48,
+      "refs": [
+        { "book": "MAT", "chapter": 22, "verse_start": 44, "verse_end": 44 },
+        { "book": "MRK", "chapter": 12, "verse_start": 36, "verse_end": 36 },
+        { "book": "LUK", "chapter": 20, "verse_start": 42, "verse_end": 43 },
+        { "book": "PSA", "chapter": 110, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1042,
+      "title": "멸망의 가증한 것",
+      "section": 4,
+      "order": 50,
+      "refs": [
+        { "book": "MAT", "chapter": 24, "verse_start": 15, "verse_end": 15 },
+        { "book": "MRK", "chapter": 13, "verse_start": 14, "verse_end": 14 },
+        { "book": "DAN", "chapter": 9, "verse_start": 27, "verse_end": 27 },
+        { "book": "DAN", "chapter": 12, "verse_start": 11, "verse_end": 11 }
+      ]
+    },
+    {
+      "id": 1043,
+      "title": "해가 어두워지며 별들이 떨어지며",
+      "section": 4,
+      "order": 51,
+      "refs": [
+        { "book": "MAT", "chapter": 24, "verse_start": 29, "verse_end": 29 },
+        { "book": "MRK", "chapter": 13, "verse_start": 24, "verse_end": 25 },
+        { "book": "ISA", "chapter": 13, "verse_start": 10, "verse_end": 10 },
+        { "book": "ISA", "chapter": 34, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1044,
+      "title": "인자가 구름을 타고 오는 것",
+      "section": 4,
+      "order": 52,
+      "refs": [
+        { "book": "MAT", "chapter": 24, "verse_start": 30, "verse_end": 30 },
+        { "book": "MRK", "chapter": 13, "verse_start": 26, "verse_end": 26 },
+        { "book": "LUK", "chapter": 21, "verse_start": 27, "verse_end": 27 },
+        { "book": "DAN", "chapter": 7, "verse_start": 13, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1045,
+      "title": "권능의 우편에 앉은 것과 하늘 구름을 타고",
+      "section": 5,
+      "order": 56,
+      "refs": [
+        { "book": "MAT", "chapter": 26, "verse_start": 64, "verse_end": 64 },
+        { "book": "MRK", "chapter": 14, "verse_start": 62, "verse_end": 62 },
+        { "book": "LUK", "chapter": 22, "verse_start": 69, "verse_end": 69 },
+        { "book": "PSA", "chapter": 110, "verse_start": 1, "verse_end": 1 },
+        { "book": "DAN", "chapter": 7, "verse_start": 13, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1046,
+      "title": "목자를 치리니 양들이 흩어지리라",
+      "section": 5,
+      "order": 55,
+      "refs": [
+        { "book": "MAT", "chapter": 26, "verse_start": 31, "verse_end": 31 },
+        { "book": "MRK", "chapter": 14, "verse_start": 27, "verse_end": 27 },
+        { "book": "ZEC", "chapter": 13, "verse_start": 7, "verse_end": 7 }
+      ]
+    },
+    {
+      "id": 1047,
+      "title": "불법자의 동류로 여김을 받았다",
+      "section": 5,
+      "order": 60,
+      "refs": [
+        { "book": "MRK", "chapter": 15, "verse_start": 28, "verse_end": 28 },
+        { "book": "LUK", "chapter": 22, "verse_start": 37, "verse_end": 37 },
+        { "book": "ISA", "chapter": 53, "verse_start": 12, "verse_end": 12 }
+      ]
+    },
+    {
+      "id": 1048,
+      "title": "은 삼십",
+      "section": 5,
+      "order": 57,
+      "refs": [
+        { "book": "MAT", "chapter": 27, "verse_start": 9, "verse_end": 10 },
+        { "book": "ZEC", "chapter": 11, "verse_start": 12, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1049,
+      "title": "내 옷을 나누며",
+      "section": 5,
+      "order": 58,
+      "refs": [
+        { "book": "MAT", "chapter": 27, "verse_start": 35, "verse_end": 35 },
+        { "book": "MRK", "chapter": 15, "verse_start": 24, "verse_end": 24 },
+        { "book": "LUK", "chapter": 23, "verse_start": 34, "verse_end": 34 },
+        { "book": "JHN", "chapter": 19, "verse_start": 23, "verse_end": 24 },
+        { "book": "PSA", "chapter": 22, "verse_start": 18, "verse_end": 18 }
+      ]
+    },
+    {
+      "id": 1050,
+      "title": "하나님을 신뢰하니 구원하실지라",
+      "section": 5,
+      "order": 61,
+      "refs": [
+        { "book": "MAT", "chapter": 27, "verse_start": 43, "verse_end": 43 },
+        { "book": "PSA", "chapter": 22, "verse_start": 8, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1051,
+      "title": "내 하나님이여 어찌하여 나를 버리셨나이까",
+      "section": 5,
+      "order": 63,
+      "refs": [
+        { "book": "MAT", "chapter": 27, "verse_start": 46, "verse_end": 46 },
+        { "book": "MRK", "chapter": 15, "verse_start": 34, "verse_end": 34 },
+        { "book": "PSA", "chapter": 22, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1052,
+      "title": "내 영혼을 아버지 손에 부탁하나이다",
+      "section": 5,
+      "order": 64,
+      "refs": [
+        { "book": "LUK", "chapter": 23, "verse_start": 46, "verse_end": 46 },
+        { "book": "PSA", "chapter": 31, "verse_start": 5, "verse_end": 5 }
+      ]
+    },
+    {
+      "id": 1053,
+      "title": "산들아 우리 위에 무너지라",
+      "section": 5,
+      "order": 59,
+      "refs": [
+        { "book": "LUK", "chapter": 23, "verse_start": 30, "verse_end": 30 },
+        { "book": "HOS", "chapter": 10, "verse_start": 8, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1054,
+      "title": "첫 태에 처음 난 남자",
+      "section": 1,
+      "order": 5,
+      "refs": [
+        { "book": "LUK", "chapter": 2, "verse_start": 22, "verse_end": 24 },
+        { "book": "EXO", "chapter": 13, "verse_start": 2, "verse_end": 2 },
+        { "book": "LEV", "chapter": 12, "verse_start": 8, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1055,
+      "title": "그 불도 꺼지지 아니하느니라",
+      "section": 3,
+      "order": 34,
+      "refs": [
+        { "book": "MRK", "chapter": 9, "verse_start": 48, "verse_end": 48 },
+        { "book": "ISA", "chapter": 66, "verse_start": 24, "verse_end": 24 }
+      ]
+    },
+    {
+      "id": 1056,
+      "title": "주의 전을 사모하는 열심",
+      "section": 4,
+      "order": 42,
+      "refs": [
+        { "book": "JHN", "chapter": 2, "verse_start": 17, "verse_end": 17 },
+        { "book": "PSA", "chapter": 69, "verse_start": 9, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1057,
+      "title": "모세가 광야에서 뱀을 든 것 같이",
+      "section": 2,
+      "order": 12,
+      "refs": [
+        { "book": "JHN", "chapter": 3, "verse_start": 14, "verse_end": 14 },
+        { "book": "NUM", "chapter": 21, "verse_start": 8, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1058,
+      "title": "하늘에서 떡을 주어 먹게 하였다",
+      "section": 2,
+      "order": 28,
+      "refs": [
+        { "book": "JHN", "chapter": 6, "verse_start": 31, "verse_end": 31 },
+        { "book": "PSA", "chapter": 78, "verse_start": 24, "verse_end": 24 }
+      ]
+    },
+    {
+      "id": 1059,
+      "title": "저희가 다 하나님의 가르치심을 받으리라",
+      "section": 2,
+      "order": 29,
+      "refs": [
+        { "book": "JHN", "chapter": 6, "verse_start": 45, "verse_end": 45 },
+        { "book": "ISA", "chapter": 54, "verse_start": 13, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1060,
+      "title": "내가 너희를 신이라 하였노라",
+      "section": 3,
+      "order": 32,
+      "refs": [
+        { "book": "JHN", "chapter": 10, "verse_start": 34, "verse_end": 34 },
+        { "book": "PSA", "chapter": 82, "verse_start": 6, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1061,
+      "title": "우리에게 들은 바를 누가 믿었나이까",
+      "section": 4,
+      "order": 43,
+      "refs": [
+        { "book": "JHN", "chapter": 12, "verse_start": 38, "verse_end": 38 },
+        { "book": "ISA", "chapter": 53, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1062,
+      "title": "내 떡을 먹는 자가 발꿈치를 들었다",
+      "section": 5,
+      "order": 53,
+      "refs": [
+        { "book": "JHN", "chapter": 13, "verse_start": 18, "verse_end": 18 },
+        { "book": "PSA", "chapter": 41, "verse_start": 9, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1063,
+      "title": "저희가 연고 없이 나를 미워하였다",
+      "section": 5,
+      "order": 54,
+      "refs": [
+        { "book": "JHN", "chapter": 15, "verse_start": 25, "verse_end": 25 },
+        { "book": "PSA", "chapter": 69, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1064,
+      "title": "내가 목마르다",
+      "section": 5,
+      "order": 62,
+      "refs": [
+        { "book": "JHN", "chapter": 19, "verse_start": 28, "verse_end": 29 },
+        { "book": "PSA", "chapter": 69, "verse_start": 21, "verse_end": 21 }
+      ]
+    },
+    {
+      "id": 1065,
+      "title": "그 뼈가 하나도 꺾이지 아니하리라",
+      "section": 5,
+      "order": 65,
+      "refs": [
+        { "book": "JHN", "chapter": 19, "verse_start": 36, "verse_end": 36 },
+        { "book": "EXO", "chapter": 12, "verse_start": 46, "verse_end": 46 },
+        { "book": "PSA", "chapter": 34, "verse_start": 20, "verse_end": 20 }
+      ]
+    },
+    {
+      "id": 1066,
+      "title": "저희가 그 찌른 자를 보리라",
+      "section": 5,
+      "order": 66,
+      "refs": [
+        { "book": "JHN", "chapter": 19, "verse_start": 37, "verse_end": 37 },
+        { "book": "ZEC", "chapter": 12, "verse_start": 10, "verse_end": 10 }
+      ]
+    },
+    {
+      "id": 1067,
+      "title": "그 직분을 타인이 취하게 하소서",
+      "section": 105,
+      "order": 67,
+      "refs": [
+        { "book": "ACT", "chapter": 1, "verse_start": 20, "verse_end": 20 },
+        { "book": "PSA", "chapter": 69, "verse_start": 25, "verse_end": 25 },
+        { "book": "PSA", "chapter": 109, "verse_start": 8, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1068,
+      "title": "내 영으로 모든 육체에게 부어 주리니",
+      "section": 105,
+      "order": 68,
+      "refs": [
+        { "book": "ACT", "chapter": 2, "verse_start": 17, "verse_end": 21 },
+        { "book": "ROM", "chapter": 10, "verse_start": 13, "verse_end": 13 },
+        { "book": "JOL", "chapter": 2, "verse_start": 28, "verse_end": 32 }
+      ]
+    },
+    {
+      "id": 1069,
+      "title": "내가 항상 내 앞에 계신 주를 뵈었음이여",
+      "section": 105,
+      "order": 69,
+      "refs": [
+        { "book": "ACT", "chapter": 2, "verse_start": 25, "verse_end": 28 },
+        { "book": "ACT", "chapter": 13, "verse_start": 35, "verse_end": 35 },
+        { "book": "PSA", "chapter": 16, "verse_start": 8, "verse_end": 11 }
+      ]
+    },
+    {
+      "id": 1070,
+      "title": "내가 네 원수로 네 발등상 되게 하기까지",
+      "section": 105,
+      "order": 70,
+      "refs": [
+        { "book": "ACT", "chapter": 2, "verse_start": 34, "verse_end": 35 },
+        { "book": "HEB", "chapter": 1, "verse_start": 13, "verse_end": 13 },
+        { "book": "PSA", "chapter": 110, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1071,
+      "title": "나 같은 선지자 하나를 세울 것이니",
+      "section": 105,
+      "order": 71,
+      "refs": [
+        { "book": "ACT", "chapter": 3, "verse_start": 22, "verse_end": 23 },
+        { "book": "ACT", "chapter": 7, "verse_start": 37, "verse_end": 37 },
+        { "book": "DEU", "chapter": 18, "verse_start": 15, "verse_end": 19 },
+        { "book": "LEV", "chapter": 23, "verse_start": 29, "verse_end": 29 }
+      ]
+    },
+    {
+      "id": 1072,
+      "title": "땅 위의 모든 족속이 너의 씨를 인하여 복을 받으리라",
+      "section": 105,
+      "order": 72,
+      "refs": [
+        { "book": "ACT", "chapter": 3, "verse_start": 25, "verse_end": 25 },
+        { "book": "GAL", "chapter": 3, "verse_start": 8, "verse_end": 8 },
+        { "book": "GEN", "chapter": 12, "verse_start": 3, "verse_end": 3 },
+        { "book": "GEN", "chapter": 22, "verse_start": 18, "verse_end": 18 }
+      ]
+    },
+    {
+      "id": 1073,
+      "title": "건축자들의 버린 돌이 머릿돌이 되었다",
+      "section": 105,
+      "order": 73,
+      "refs": [
+        { "book": "ACT", "chapter": 4, "verse_start": 11, "verse_end": 11 },
+        { "book": "1PE", "chapter": 2, "verse_start": 7, "verse_end": 7 },
+        { "book": "PSA", "chapter": 118, "verse_start": 22, "verse_end": 22 }
+      ]
+    },
+    {
+      "id": 1074,
+      "title": "어찌하여 열방이 분노하며",
+      "section": 105,
+      "order": 74,
+      "refs": [
+        { "book": "ACT", "chapter": 4, "verse_start": 25, "verse_end": 26 },
+        { "book": "PSA", "chapter": 2, "verse_start": 1, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1075,
+      "title": "네 고향과 친척을 떠나",
+      "section": 105,
+      "order": 75,
+      "refs": [
+        { "book": "ACT", "chapter": 7, "verse_start": 3, "verse_end": 3 },
+        { "book": "GEN", "chapter": 12, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1076,
+      "title": "그 씨가 다른 땅에 나그네 되리니",
+      "section": 105,
+      "order": 76,
+      "refs": [
+        { "book": "ACT", "chapter": 7, "verse_start": 6, "verse_end": 7 },
+        { "book": "GEN", "chapter": 15, "verse_start": 13, "verse_end": 14 },
+        { "book": "EXO", "chapter": 3, "verse_start": 12, "verse_end": 12 }
+      ]
+    },
+    {
+      "id": 1077,
+      "title": "요셉을 알지 못하는 새 임금",
+      "section": 105,
+      "order": 77,
+      "refs": [
+        { "book": "ACT", "chapter": 7, "verse_start": 18, "verse_end": 18 },
+        { "book": "EXO", "chapter": 1, "verse_start": 8, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1078,
+      "title": "누가 너를 관원과 재판장으로 세웠느냐",
+      "section": 105,
+      "order": 78,
+      "refs": [
+        { "book": "ACT", "chapter": 7, "verse_start": 27, "verse_end": 28 },
+        { "book": "ACT", "chapter": 7, "verse_start": 35, "verse_end": 35 },
+        { "book": "EXO", "chapter": 2, "verse_start": 14, "verse_end": 14 }
+      ]
+    },
+    {
+      "id": 1079,
+      "title": "네 발에 신을 벗으라",
+      "section": 105,
+      "order": 79,
+      "refs": [
+        { "book": "ACT", "chapter": 7, "verse_start": 32, "verse_end": 34 },
+        { "book": "EXO", "chapter": 3, "verse_start": 5, "verse_end": 10 }
+      ]
+    },
+    {
+      "id": 1080,
+      "title": "우리를 인도할 신들을 만들라",
+      "section": 105,
+      "order": 80,
+      "refs": [
+        { "book": "ACT", "chapter": 7, "verse_start": 40, "verse_end": 40 },
+        { "book": "EXO", "chapter": 32, "verse_start": 1, "verse_end": 1 },
+        { "book": "EXO", "chapter": 32, "verse_start": 23, "verse_end": 23 }
+      ]
+    },
+    {
+      "id": 1081,
+      "title": "몰록의 장막과 신 레판의 별",
+      "section": 105,
+      "order": 81,
+      "refs": [
+        { "book": "ACT", "chapter": 7, "verse_start": 42, "verse_end": 43 },
+        { "book": "AMO", "chapter": 5, "verse_start": 25, "verse_end": 27 }
+      ]
+    },
+    {
+      "id": 1082,
+      "title": "하늘은 나의 보좌요 땅은 나의 발등상이니",
+      "section": 105,
+      "order": 82,
+      "refs": [
+        { "book": "ACT", "chapter": 7, "verse_start": 49, "verse_end": 50 },
+        { "book": "ISA", "chapter": 66, "verse_start": 1, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1083,
+      "title": "사지로 가는 양과 같이",
+      "section": 105,
+      "order": 83,
+      "refs": [
+        { "book": "ACT", "chapter": 8, "verse_start": 32, "verse_end": 33 },
+        { "book": "ISA", "chapter": 53, "verse_start": 7, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1084,
+      "title": "내 마음에 합한 사람 다윗",
+      "section": 105,
+      "order": 84,
+      "refs": [
+        { "book": "ACT", "chapter": 13, "verse_start": 22, "verse_end": 22 },
+        { "book": "1SA", "chapter": 13, "verse_start": 14, "verse_end": 14 },
+        { "book": "PSA", "chapter": 89, "verse_start": 20, "verse_end": 20 }
+      ]
+    },
+    {
+      "id": 1085,
+      "title": "너는 내 아들이라 오늘 너를 낳았다",
+      "section": 105,
+      "order": 85,
+      "refs": [
+        { "book": "ACT", "chapter": 13, "verse_start": 33, "verse_end": 33 },
+        { "book": "HEB", "chapter": 1, "verse_start": 5, "verse_end": 5 },
+        { "book": "HEB", "chapter": 5, "verse_start": 5, "verse_end": 5 },
+        { "book": "PSA", "chapter": 2, "verse_start": 7, "verse_end": 7 },
+        { "book": "2SA", "chapter": 7, "verse_start": 14, "verse_end": 14 }
+      ]
+    },
+    {
+      "id": 1086,
+      "title": "다윗의 거룩하고 미쁜 은사",
+      "section": 105,
+      "order": 86,
+      "refs": [
+        { "book": "ACT", "chapter": 13, "verse_start": 34, "verse_end": 34 },
+        { "book": "ISA", "chapter": 55, "verse_start": 3, "verse_end": 3 }
+      ]
+    },
+    {
+      "id": 1087,
+      "title": "보라 멸시하는 사람들아 놀라고 망하라",
+      "section": 105,
+      "order": 87,
+      "refs": [
+        { "book": "ACT", "chapter": 13, "verse_start": 40, "verse_end": 41 },
+        { "book": "HAB", "chapter": 1, "verse_start": 5, "verse_end": 5 }
+      ]
+    },
+    {
+      "id": 1088,
+      "title": "이방의 빛을 삼아",
+      "section": 105,
+      "order": 88,
+      "refs": [
+        { "book": "ACT", "chapter": 13, "verse_start": 47, "verse_end": 47 },
+        { "book": "ISA", "chapter": 49, "verse_start": 6, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1089,
+      "title": "다윗의 무너진 장막을 다시 지으며",
+      "section": 105,
+      "order": 89,
+      "refs": [
+        { "book": "ACT", "chapter": 15, "verse_start": 16, "verse_end": 17 },
+        { "book": "AMO", "chapter": 9, "verse_start": 11, "verse_end": 12 }
+      ]
+    },
+    {
+      "id": 1090,
+      "title": "너희 백성의 관원을 비방치 말라",
+      "section": 105,
+      "order": 90,
+      "refs": [
+        { "book": "ACT", "chapter": 23, "verse_start": 5, "verse_end": 5 },
+        { "book": "EXO", "chapter": 22, "verse_start": 28, "verse_end": 28 }
+      ]
+    },
+    {
+      "id": 1091,
+      "title": "듣기는 들어도 깨닫지 못하리라 (로마에서)",
+      "section": 105,
+      "order": 91,
+      "refs": [
+        { "book": "ACT", "chapter": 28, "verse_start": 26, "verse_end": 27 },
+        { "book": "ISA", "chapter": 6, "verse_start": 9, "verse_end": 10 }
+      ]
+    },
+    {
+      "id": 1092,
+      "title": "의인은 믿음으로 말미암아 살리라",
+      "section": 106,
+      "order": 92,
+      "refs": [
+        { "book": "ROM", "chapter": 1, "verse_start": 17, "verse_end": 17 },
+        { "book": "GAL", "chapter": 3, "verse_start": 11, "verse_end": 11 },
+        { "book": "HEB", "chapter": 10, "verse_start": 37, "verse_end": 38 },
+        { "book": "HAB", "chapter": 2, "verse_start": 3, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1093,
+      "title": "하나님의 이름이 너희로 인하여 모독을 받는도다",
+      "section": 106,
+      "order": 93,
+      "refs": [
+        { "book": "ROM", "chapter": 2, "verse_start": 24, "verse_end": 24 },
+        { "book": "ISA", "chapter": 52, "verse_start": 5, "verse_end": 5 }
+      ]
+    },
+    {
+      "id": 1094,
+      "title": "주께서 주의 말씀에 의롭다 함을 얻으시고",
+      "section": 106,
+      "order": 94,
+      "refs": [
+        { "book": "ROM", "chapter": 3, "verse_start": 4, "verse_end": 4 },
+        { "book": "PSA", "chapter": 51, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1095,
+      "title": "의인은 없나니 하나도 없으며",
+      "section": 106,
+      "order": 95,
+      "refs": [
+        { "book": "ROM", "chapter": 3, "verse_start": 10, "verse_end": 18 },
+        { "book": "PSA", "chapter": 14, "verse_start": 1, "verse_end": 3 },
+        { "book": "PSA", "chapter": 5, "verse_start": 9, "verse_end": 9 },
+        { "book": "PSA", "chapter": 140, "verse_start": 3, "verse_end": 3 },
+        { "book": "PSA", "chapter": 10, "verse_start": 7, "verse_end": 7 },
+        { "book": "PSA", "chapter": 36, "verse_start": 1, "verse_end": 1 },
+        { "book": "ISA", "chapter": 59, "verse_start": 7, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1096,
+      "title": "아브라함이 하나님을 믿으매 의로 여기신 바 되었느니라",
+      "section": 106,
+      "order": 96,
+      "refs": [
+        { "book": "ROM", "chapter": 4, "verse_start": 3, "verse_end": 3 },
+        { "book": "ROM", "chapter": 4, "verse_start": 22, "verse_end": 22 },
+        { "book": "GAL", "chapter": 3, "verse_start": 6, "verse_end": 6 },
+        { "book": "JAS", "chapter": 2, "verse_start": 23, "verse_end": 23 },
+        { "book": "GEN", "chapter": 15, "verse_start": 6, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1097,
+      "title": "그 불법을 사하심을 받고",
+      "section": 106,
+      "order": 97,
+      "refs": [
+        { "book": "ROM", "chapter": 4, "verse_start": 7, "verse_end": 8 },
+        { "book": "PSA", "chapter": 32, "verse_start": 1, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1098,
+      "title": "내가 너를 많은 민족의 조상으로 세웠다",
+      "section": 106,
+      "order": 98,
+      "refs": [
+        { "book": "ROM", "chapter": 4, "verse_start": 17, "verse_end": 18 },
+        { "book": "GEN", "chapter": 15, "verse_start": 5, "verse_end": 5 },
+        { "book": "GEN", "chapter": 17, "verse_start": 5, "verse_end": 5 }
+      ]
+    },
+    {
+      "id": 1099,
+      "title": "탐내지 말라",
+      "section": 106,
+      "order": 99,
+      "refs": [
+        { "book": "ROM", "chapter": 7, "verse_start": 7, "verse_end": 7 },
+        { "book": "EXO", "chapter": 20, "verse_start": 17, "verse_end": 17 }
+      ]
+    },
+    {
+      "id": 1100,
+      "title": "종일 주를 위하여 죽임을 당케 되며",
+      "section": 106,
+      "order": 100,
+      "refs": [
+        { "book": "ROM", "chapter": 8, "verse_start": 36, "verse_end": 36 },
+        { "book": "PSA", "chapter": 44, "verse_start": 22, "verse_end": 22 }
+      ]
+    },
+    {
+      "id": 1101,
+      "title": "이삭으로부터 난 자라야 네 씨라",
+      "section": 106,
+      "order": 101,
+      "refs": [
+        { "book": "ROM", "chapter": 9, "verse_start": 7, "verse_end": 7 },
+        { "book": "HEB", "chapter": 11, "verse_start": 18, "verse_end": 18 },
+        { "book": "GEN", "chapter": 21, "verse_start": 12, "verse_end": 12 }
+      ]
+    },
+    {
+      "id": 1102,
+      "title": "명년 이 때에 사라에게 아들이 있으리라",
+      "section": 106,
+      "order": 102,
+      "refs": [
+        { "book": "ROM", "chapter": 9, "verse_start": 9, "verse_end": 9 },
+        { "book": "GEN", "chapter": 18, "verse_start": 10, "verse_end": 10 },
+        { "book": "GEN", "chapter": 18, "verse_start": 14, "verse_end": 14 }
+      ]
+    },
+    {
+      "id": 1103,
+      "title": "큰 자가 어린 자를 섬기리라",
+      "section": 106,
+      "order": 103,
+      "refs": [
+        { "book": "ROM", "chapter": 9, "verse_start": 12, "verse_end": 13 },
+        { "book": "GEN", "chapter": 25, "verse_start": 23, "verse_end": 23 },
+        { "book": "MAL", "chapter": 1, "verse_start": 2, "verse_end": 3 }
+      ]
+    },
+    {
+      "id": 1104,
+      "title": "긍휼히 여길 자를 긍휼히 여기고",
+      "section": 106,
+      "order": 104,
+      "refs": [
+        { "book": "ROM", "chapter": 9, "verse_start": 15, "verse_end": 15 },
+        { "book": "EXO", "chapter": 33, "verse_start": 19, "verse_end": 19 }
+      ]
+    },
+    {
+      "id": 1105,
+      "title": "이 일을 위하여 너를 세웠으니",
+      "section": 106,
+      "order": 105,
+      "refs": [
+        { "book": "ROM", "chapter": 9, "verse_start": 17, "verse_end": 17 },
+        { "book": "EXO", "chapter": 9, "verse_start": 16, "verse_end": 16 }
+      ]
+    },
+    {
+      "id": 1106,
+      "title": "내 백성 아닌 자를 내 백성이라",
+      "section": 106,
+      "order": 106,
+      "refs": [
+        { "book": "ROM", "chapter": 9, "verse_start": 25, "verse_end": 26 },
+        { "book": "1PE", "chapter": 2, "verse_start": 10, "verse_end": 10 },
+        { "book": "HOS", "chapter": 1, "verse_start": 10, "verse_end": 10 },
+        { "book": "HOS", "chapter": 2, "verse_start": 23, "verse_end": 23 }
+      ]
+    },
+    {
+      "id": 1107,
+      "title": "남은 자만 구원을 얻으리니",
+      "section": 106,
+      "order": 107,
+      "refs": [
+        { "book": "ROM", "chapter": 9, "verse_start": 27, "verse_end": 28 },
+        { "book": "ISA", "chapter": 10, "verse_start": 22, "verse_end": 23 }
+      ]
+    },
+    {
+      "id": 1108,
+      "title": "만군의 주께서 우리에게 씨를 남겨 두지 아니하셨더면",
+      "section": 106,
+      "order": 108,
+      "refs": [
+        { "book": "ROM", "chapter": 9, "verse_start": 29, "verse_end": 29 },
+        { "book": "ISA", "chapter": 1, "verse_start": 9, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1109,
+      "title": "부딪히는 돌과 거치는 반석을 시온에 두노니",
+      "section": 106,
+      "order": 109,
+      "refs": [
+        { "book": "ROM", "chapter": 9, "verse_start": 33, "verse_end": 33 },
+        { "book": "ROM", "chapter": 10, "verse_start": 11, "verse_end": 11 },
+        { "book": "1PE", "chapter": 2, "verse_start": 6, "verse_end": 6 },
+        { "book": "1PE", "chapter": 2, "verse_start": 8, "verse_end": 8 },
+        { "book": "ISA", "chapter": 8, "verse_start": 14, "verse_end": 14 },
+        { "book": "ISA", "chapter": 28, "verse_start": 16, "verse_end": 16 }
+      ]
+    },
+    {
+      "id": 1110,
+      "title": "의를 행하는 사람은 그 의로 살리라",
+      "section": 106,
+      "order": 110,
+      "refs": [
+        { "book": "ROM", "chapter": 10, "verse_start": 5, "verse_end": 5 },
+        { "book": "GAL", "chapter": 3, "verse_start": 12, "verse_end": 12 },
+        { "book": "LEV", "chapter": 18, "verse_start": 5, "verse_end": 5 }
+      ]
+    },
+    {
+      "id": 1111,
+      "title": "말씀이 네게 가까워 네 입에 있으며",
+      "section": 106,
+      "order": 111,
+      "refs": [
+        { "book": "ROM", "chapter": 10, "verse_start": 6, "verse_end": 8 },
+        { "book": "DEU", "chapter": 30, "verse_start": 12, "verse_end": 14 }
+      ]
+    },
+    {
+      "id": 1112,
+      "title": "좋은 소식을 전하는 자들의 발이여",
+      "section": 106,
+      "order": 112,
+      "refs": [
+        { "book": "ROM", "chapter": 10, "verse_start": 15, "verse_end": 15 },
+        { "book": "ISA", "chapter": 52, "verse_start": 7, "verse_end": 7 }
+      ]
+    },
+    {
+      "id": 1113,
+      "title": "주여 우리의 전하는 바를 누가 믿었나이까 (로마서)",
+      "section": 106,
+      "order": 113,
+      "refs": [
+        { "book": "ROM", "chapter": 10, "verse_start": 16, "verse_end": 16 },
+        { "book": "ISA", "chapter": 53, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1114,
+      "title": "그 소리가 온 땅에 퍼졌고",
+      "section": 106,
+      "order": 114,
+      "refs": [
+        { "book": "ROM", "chapter": 10, "verse_start": 18, "verse_end": 18 },
+        { "book": "PSA", "chapter": 19, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1115,
+      "title": "백성 아닌 자로써 너희를 시기나게 하며",
+      "section": 106,
+      "order": 115,
+      "refs": [
+        { "book": "ROM", "chapter": 10, "verse_start": 19, "verse_end": 19 },
+        { "book": "DEU", "chapter": 32, "verse_start": 21, "verse_end": 21 }
+      ]
+    },
+    {
+      "id": 1116,
+      "title": "구하지 아니하는 자들에게 찾은 바 되고",
+      "section": 106,
+      "order": 116,
+      "refs": [
+        { "book": "ROM", "chapter": 10, "verse_start": 20, "verse_end": 21 },
+        { "book": "ISA", "chapter": 65, "verse_start": 1, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1117,
+      "title": "바알에게 무릎을 꿇지 아니한 사람 칠천",
+      "section": 106,
+      "order": 117,
+      "refs": [
+        { "book": "ROM", "chapter": 11, "verse_start": 3, "verse_end": 4 },
+        { "book": "1KI", "chapter": 19, "verse_start": 10, "verse_end": 10 },
+        { "book": "1KI", "chapter": 19, "verse_start": 18, "verse_end": 18 }
+      ]
+    },
+    {
+      "id": 1118,
+      "title": "혼미한 심령과 보지 못할 눈",
+      "section": 106,
+      "order": 118,
+      "refs": [
+        { "book": "ROM", "chapter": 11, "verse_start": 8, "verse_end": 8 },
+        { "book": "DEU", "chapter": 29, "verse_start": 4, "verse_end": 4 },
+        { "book": "ISA", "chapter": 29, "verse_start": 10, "verse_end": 10 }
+      ]
+    },
+    {
+      "id": 1119,
+      "title": "저희 밥상이 올무와 덫이 되게 하옵시고",
+      "section": 106,
+      "order": 119,
+      "refs": [
+        { "book": "ROM", "chapter": 11, "verse_start": 9, "verse_end": 10 },
+        { "book": "PSA", "chapter": 69, "verse_start": 22, "verse_end": 23 }
+      ]
+    },
+    {
+      "id": 1120,
+      "title": "구원자가 시온에서 오사",
+      "section": 106,
+      "order": 120,
+      "refs": [
+        { "book": "ROM", "chapter": 11, "verse_start": 26, "verse_end": 27 },
+        { "book": "ISA", "chapter": 59, "verse_start": 20, "verse_end": 21 },
+        { "book": "ISA", "chapter": 27, "verse_start": 9, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1121,
+      "title": "누가 주의 마음을 알았느뇨",
+      "section": 106,
+      "order": 121,
+      "refs": [
+        { "book": "ROM", "chapter": 11, "verse_start": 34, "verse_end": 35 },
+        { "book": "1CO", "chapter": 2, "verse_start": 16, "verse_end": 16 },
+        { "book": "JOB", "chapter": 41, "verse_start": 11, "verse_end": 11 },
+        { "book": "ISA", "chapter": 40, "verse_start": 13, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1122,
+      "title": "원수 갚는 것이 내게 있으니",
+      "section": 106,
+      "order": 122,
+      "refs": [
+        { "book": "ROM", "chapter": 12, "verse_start": 19, "verse_end": 19 },
+        { "book": "HEB", "chapter": 10, "verse_start": 30, "verse_end": 30 },
+        { "book": "DEU", "chapter": 32, "verse_start": 35, "verse_end": 36 }
+      ]
+    },
+    {
+      "id": 1123,
+      "title": "네 원수가 주리거든 먹이고",
+      "section": 106,
+      "order": 123,
+      "refs": [
+        { "book": "ROM", "chapter": 12, "verse_start": 20, "verse_end": 20 },
+        { "book": "PRO", "chapter": 25, "verse_start": 21, "verse_end": 22 }
+      ]
+    },
+    {
+      "id": 1124,
+      "title": "네 이웃을 네 자신과 같이 사랑하라",
+      "section": 106,
+      "order": 124,
+      "refs": [
+        { "book": "ROM", "chapter": 13, "verse_start": 9, "verse_end": 9 },
+        { "book": "GAL", "chapter": 5, "verse_start": 14, "verse_end": 14 },
+        { "book": "JAS", "chapter": 2, "verse_start": 8, "verse_end": 8 },
+        { "book": "JAS", "chapter": 2, "verse_start": 11, "verse_end": 11 },
+        { "book": "EXO", "chapter": 20, "verse_start": 13, "verse_end": 15 },
+        { "book": "EXO", "chapter": 20, "verse_start": 17, "verse_end": 17 },
+        { "book": "LEV", "chapter": 19, "verse_start": 18, "verse_end": 18 }
+      ]
+    },
+    {
+      "id": 1125,
+      "title": "모든 무릎이 내게 꿇을 것이요",
+      "section": 106,
+      "order": 125,
+      "refs": [
+        { "book": "ROM", "chapter": 14, "verse_start": 11, "verse_end": 11 },
+        { "book": "PHP", "chapter": 2, "verse_start": 10, "verse_end": 11 },
+        { "book": "ISA", "chapter": 45, "verse_start": 23, "verse_end": 23 }
+      ]
+    },
+    {
+      "id": 1126,
+      "title": "주를 비방하는 자들의 비방이 내게 미쳤나이다",
+      "section": 106,
+      "order": 126,
+      "refs": [
+        { "book": "ROM", "chapter": 15, "verse_start": 3, "verse_end": 3 },
+        { "book": "PSA", "chapter": 69, "verse_start": 9, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1127,
+      "title": "열방 중에서 주께 감사하고",
+      "section": 106,
+      "order": 127,
+      "refs": [
+        { "book": "ROM", "chapter": 15, "verse_start": 9, "verse_end": 12 },
+        { "book": "PSA", "chapter": 18, "verse_start": 49, "verse_end": 49 },
+        { "book": "DEU", "chapter": 32, "verse_start": 43, "verse_end": 43 },
+        { "book": "PSA", "chapter": 117, "verse_start": 1, "verse_end": 1 },
+        { "book": "ISA", "chapter": 11, "verse_start": 10, "verse_end": 10 }
+      ]
+    },
+    {
+      "id": 1128,
+      "title": "주의 소식을 받지 못한 자들이 볼 것이요",
+      "section": 106,
+      "order": 128,
+      "refs": [
+        { "book": "ROM", "chapter": 15, "verse_start": 21, "verse_end": 21 },
+        { "book": "ISA", "chapter": 52, "verse_start": 15, "verse_end": 15 }
+      ]
+    },
+    {
+      "id": 1129,
+      "title": "지혜 있는 자들의 지혜를 멸하고",
+      "section": 107,
+      "order": 129,
+      "refs": [
+        { "book": "1CO", "chapter": 1, "verse_start": 19, "verse_end": 19 },
+        { "book": "ISA", "chapter": 29, "verse_start": 14, "verse_end": 14 }
+      ]
+    },
+    {
+      "id": 1130,
+      "title": "자랑하는 자는 주 안에서 자랑하라",
+      "section": 107,
+      "order": 130,
+      "refs": [
+        { "book": "1CO", "chapter": 1, "verse_start": 31, "verse_end": 31 },
+        { "book": "2CO", "chapter": 10, "verse_start": 17, "verse_end": 17 },
+        { "book": "JER", "chapter": 9, "verse_start": 24, "verse_end": 24 }
+      ]
+    },
+    {
+      "id": 1131,
+      "title": "눈으로 보지 못하고 귀로도 듣지 못하고",
+      "section": 107,
+      "order": 131,
+      "refs": [
+        { "book": "1CO", "chapter": 2, "verse_start": 9, "verse_end": 9 },
+        { "book": "ISA", "chapter": 64, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1132,
+      "title": "지혜 있는 자들로 자기 궤휼에 빠지게 하시는 이",
+      "section": 107,
+      "order": 132,
+      "refs": [
+        { "book": "1CO", "chapter": 3, "verse_start": 19, "verse_end": 20 },
+        { "book": "JOB", "chapter": 5, "verse_start": 13, "verse_end": 13 },
+        { "book": "PSA", "chapter": 94, "verse_start": 11, "verse_end": 11 }
+      ]
+    },
+    {
+      "id": 1133,
+      "title": "이 악한 사람은 너희 중에서 내어 쫓으라",
+      "section": 107,
+      "order": 133,
+      "refs": [
+        { "book": "1CO", "chapter": 5, "verse_start": 13, "verse_end": 13 },
+        { "book": "DEU", "chapter": 17, "verse_start": 7, "verse_end": 7 }
+      ]
+    },
+    {
+      "id": 1134,
+      "title": "둘이 한 육체가 된다 (서신)",
+      "section": 107,
+      "order": 134,
+      "refs": [
+        { "book": "1CO", "chapter": 6, "verse_start": 16, "verse_end": 16 },
+        { "book": "EPH", "chapter": 5, "verse_start": 31, "verse_end": 31 },
+        { "book": "GEN", "chapter": 2, "verse_start": 24, "verse_end": 24 }
+      ]
+    },
+    {
+      "id": 1135,
+      "title": "곡식을 밟아 떠는 소의 입에 망을 씌우지 말라",
+      "section": 107,
+      "order": 135,
+      "refs": [
+        { "book": "1CO", "chapter": 9, "verse_start": 9, "verse_end": 9 },
+        { "book": "1TI", "chapter": 5, "verse_start": 18, "verse_end": 18 },
+        { "book": "DEU", "chapter": 25, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1136,
+      "title": "백성이 앉아서 먹고 마시며 일어나서 뛰논다",
+      "section": 107,
+      "order": 136,
+      "refs": [
+        { "book": "1CO", "chapter": 10, "verse_start": 7, "verse_end": 7 },
+        { "book": "EXO", "chapter": 32, "verse_start": 6, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1137,
+      "title": "땅과 거기 충만한 것이 주의 것임이니라",
+      "section": 107,
+      "order": 137,
+      "refs": [
+        { "book": "1CO", "chapter": 10, "verse_start": 26, "verse_end": 26 },
+        { "book": "PSA", "chapter": 24, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1138,
+      "title": "다른 방언을 말하는 자와 다른 입술로",
+      "section": 107,
+      "order": 138,
+      "refs": [
+        { "book": "1CO", "chapter": 14, "verse_start": 21, "verse_end": 21 },
+        { "book": "ISA", "chapter": 28, "verse_start": 11, "verse_end": 12 }
+      ]
+    },
+    {
+      "id": 1139,
+      "title": "만물을 저의 발 아래 두셨다",
+      "section": 107,
+      "order": 139,
+      "refs": [
+        { "book": "1CO", "chapter": 15, "verse_start": 27, "verse_end": 27 },
+        { "book": "HEB", "chapter": 2, "verse_start": 6, "verse_end": 8 },
+        { "book": "PSA", "chapter": 8, "verse_start": 4, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1140,
+      "title": "내일 죽을 터이니 먹고 마시자",
+      "section": 107,
+      "order": 140,
+      "refs": [
+        { "book": "1CO", "chapter": 15, "verse_start": 32, "verse_end": 32 },
+        { "book": "ISA", "chapter": 22, "verse_start": 13, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1141,
+      "title": "첫 사람 아담은 산 영이 되었다",
+      "section": 107,
+      "order": 141,
+      "refs": [
+        { "book": "1CO", "chapter": 15, "verse_start": 45, "verse_end": 45 },
+        { "book": "GEN", "chapter": 2, "verse_start": 7, "verse_end": 7 }
+      ]
+    },
+    {
+      "id": 1142,
+      "title": "사망이 이김의 삼킨 바 되리라",
+      "section": 107,
+      "order": 142,
+      "refs": [
+        { "book": "1CO", "chapter": 15, "verse_start": 54, "verse_end": 55 },
+        { "book": "ISA", "chapter": 25, "verse_start": 8, "verse_end": 8 },
+        { "book": "HOS", "chapter": 13, "verse_start": 14, "verse_end": 14 }
+      ]
+    },
+    {
+      "id": 1143,
+      "title": "내가 믿는 고로 말하였다",
+      "section": 108,
+      "order": 143,
+      "refs": [
+        { "book": "2CO", "chapter": 4, "verse_start": 13, "verse_end": 13 },
+        { "book": "PSA", "chapter": 116, "verse_start": 10, "verse_end": 10 }
+      ]
+    },
+    {
+      "id": 1144,
+      "title": "은혜 베풀 때에 너를 듣고",
+      "section": 108,
+      "order": 144,
+      "refs": [
+        { "book": "2CO", "chapter": 6, "verse_start": 2, "verse_end": 2 },
+        { "book": "ISA", "chapter": 49, "verse_start": 8, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1145,
+      "title": "나는 저희 하나님이 되고 저희는 나의 백성이 되리라",
+      "section": 108,
+      "order": 145,
+      "refs": [
+        { "book": "2CO", "chapter": 6, "verse_start": 16, "verse_end": 18 },
+        { "book": "REV", "chapter": 21, "verse_start": 3, "verse_end": 3 },
+        { "book": "REV", "chapter": 21, "verse_start": 7, "verse_end": 7 },
+        { "book": "LEV", "chapter": 26, "verse_start": 11, "verse_end": 12 },
+        { "book": "2SA", "chapter": 7, "verse_start": 14, "verse_end": 14 },
+        { "book": "ISA", "chapter": 52, "verse_start": 11, "verse_end": 11 }
+      ]
+    },
+    {
+      "id": 1146,
+      "title": "많이 거둔 자도 남지 아니하였고",
+      "section": 108,
+      "order": 146,
+      "refs": [
+        { "book": "2CO", "chapter": 8, "verse_start": 15, "verse_end": 15 },
+        { "book": "EXO", "chapter": 16, "verse_start": 18, "verse_end": 18 }
+      ]
+    },
+    {
+      "id": 1147,
+      "title": "저가 흩어 가난한 자들에게 주었으니",
+      "section": 108,
+      "order": 147,
+      "refs": [
+        { "book": "2CO", "chapter": 9, "verse_start": 9, "verse_end": 9 },
+        { "book": "PSA", "chapter": 112, "verse_start": 9, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1148,
+      "title": "두세 증인의 입으로 (서신)",
+      "section": 108,
+      "order": 148,
+      "refs": [
+        { "book": "2CO", "chapter": 13, "verse_start": 1, "verse_end": 1 },
+        { "book": "1TI", "chapter": 5, "verse_start": 19, "verse_end": 19 },
+        { "book": "DEU", "chapter": 19, "verse_start": 15, "verse_end": 15 }
+      ]
+    },
+    {
+      "id": 1149,
+      "title": "율법 책에 기록된 대로 항상 행하지 아니하는 자는 저주 아래",
+      "section": 109,
+      "order": 149,
+      "refs": [
+        { "book": "GAL", "chapter": 3, "verse_start": 10, "verse_end": 10 },
+        { "book": "DEU", "chapter": 27, "verse_start": 26, "verse_end": 26 }
+      ]
+    },
+    {
+      "id": 1150,
+      "title": "나무에 달린 자마다 저주 아래 있는 자라",
+      "section": 109,
+      "order": 150,
+      "refs": [
+        { "book": "GAL", "chapter": 3, "verse_start": 13, "verse_end": 13 },
+        { "book": "DEU", "chapter": 21, "verse_start": 23, "verse_end": 23 }
+      ]
+    },
+    {
+      "id": 1151,
+      "title": "오직 하나를 가리켜 네 자손이라",
+      "section": 109,
+      "order": 151,
+      "refs": [
+        { "book": "GAL", "chapter": 3, "verse_start": 16, "verse_end": 16 },
+        { "book": "GEN", "chapter": 12, "verse_start": 7, "verse_end": 7 },
+        { "book": "GEN", "chapter": 13, "verse_start": 15, "verse_end": 15 }
+      ]
+    },
+    {
+      "id": 1152,
+      "title": "잉태치 못한 자여 즐거워하라",
+      "section": 109,
+      "order": 152,
+      "refs": [
+        { "book": "GAL", "chapter": 4, "verse_start": 27, "verse_end": 27 },
+        { "book": "ISA", "chapter": 54, "verse_start": 1, "verse_end": 1 }
+      ]
+    },
+    {
+      "id": 1153,
+      "title": "계집종과 그 아들을 내어 쫓으라",
+      "section": 109,
+      "order": 153,
+      "refs": [
+        { "book": "GAL", "chapter": 4, "verse_start": 30, "verse_end": 30 },
+        { "book": "GEN", "chapter": 21, "verse_start": 10, "verse_end": 10 }
+      ]
+    },
+    {
+      "id": 1154,
+      "title": "위로 올라가실 때에 사로잡힌 자를 사로잡고",
+      "section": 110,
+      "order": 154,
+      "refs": [
+        { "book": "EPH", "chapter": 4, "verse_start": 8, "verse_end": 8 },
+        { "book": "PSA", "chapter": 68, "verse_start": 18, "verse_end": 18 }
+      ]
+    },
+    {
+      "id": 1155,
+      "title": "각각 그 이웃으로 더불어 참된 것을 말하라",
+      "section": 110,
+      "order": 155,
+      "refs": [
+        { "book": "EPH", "chapter": 4, "verse_start": 25, "verse_end": 25 },
+        { "book": "ZEC", "chapter": 8, "verse_start": 16, "verse_end": 16 }
+      ]
+    },
+    {
+      "id": 1156,
+      "title": "분을 내어도 죄를 짓지 말며",
+      "section": 110,
+      "order": 156,
+      "refs": [
+        { "book": "EPH", "chapter": 4, "verse_start": 26, "verse_end": 26 },
+        { "book": "PSA", "chapter": 4, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1157,
+      "title": "네 아버지와 어머니를 공경하라 (서신)",
+      "section": 110,
+      "order": 157,
+      "refs": [
+        { "book": "EPH", "chapter": 6, "verse_start": 2, "verse_end": 3 },
+        { "book": "EXO", "chapter": 20, "verse_start": 12, "verse_end": 12 },
+        { "book": "DEU", "chapter": 5, "verse_start": 16, "verse_end": 16 }
+      ]
+    },
+    {
+      "id": 1158,
+      "title": "주께서 자기 백성을 아신다",
+      "section": 116,
+      "order": 158,
+      "refs": [
+        { "book": "2TI", "chapter": 2, "verse_start": 19, "verse_end": 19 },
+        { "book": "NUM", "chapter": 16, "verse_start": 5, "verse_end": 5 }
+      ]
+    },
+    {
+      "id": 1159,
+      "title": "하나님의 모든 천사가 저에게 경배할지어다",
+      "section": 119,
+      "order": 159,
+      "refs": [
+        { "book": "HEB", "chapter": 1, "verse_start": 6, "verse_end": 6 },
+        { "book": "PSA", "chapter": 97, "verse_start": 7, "verse_end": 7 }
+      ]
+    },
+    {
+      "id": 1160,
+      "title": "그의 천사들을 바람으로, 그의 사역자들을 불꽃으로",
+      "section": 119,
+      "order": 160,
+      "refs": [
+        { "book": "HEB", "chapter": 1, "verse_start": 7, "verse_end": 7 },
+        { "book": "PSA", "chapter": 104, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1161,
+      "title": "하나님이여 주의 보좌가 영영하며",
+      "section": 119,
+      "order": 161,
+      "refs": [
+        { "book": "HEB", "chapter": 1, "verse_start": 8, "verse_end": 9 },
+        { "book": "PSA", "chapter": 45, "verse_start": 6, "verse_end": 7 }
+      ]
+    },
+    {
+      "id": 1162,
+      "title": "주여 태초에 주께서 땅의 기초를 두셨으며",
+      "section": 119,
+      "order": 162,
+      "refs": [
+        { "book": "HEB", "chapter": 1, "verse_start": 10, "verse_end": 12 },
+        { "book": "PSA", "chapter": 102, "verse_start": 25, "verse_end": 27 }
+      ]
+    },
+    {
+      "id": 1163,
+      "title": "내가 주의 이름을 내 형제들에게 선포하고",
+      "section": 119,
+      "order": 163,
+      "refs": [
+        { "book": "HEB", "chapter": 2, "verse_start": 12, "verse_end": 12 },
+        { "book": "PSA", "chapter": 22, "verse_start": 22, "verse_end": 22 }
+      ]
+    },
+    {
+      "id": 1164,
+      "title": "나와 및 하나님께서 내게 주신 자녀라",
+      "section": 119,
+      "order": 164,
+      "refs": [
+        { "book": "HEB", "chapter": 2, "verse_start": 13, "verse_end": 13 },
+        { "book": "ISA", "chapter": 8, "verse_start": 17, "verse_end": 18 }
+      ]
+    },
+    {
+      "id": 1165,
+      "title": "오늘날 너희가 그의 음성을 듣거든",
+      "section": 119,
+      "order": 165,
+      "refs": [
+        { "book": "HEB", "chapter": 3, "verse_start": 7, "verse_end": 11 },
+        { "book": "HEB", "chapter": 3, "verse_start": 15, "verse_end": 15 },
+        { "book": "HEB", "chapter": 4, "verse_start": 7, "verse_end": 7 },
+        { "book": "PSA", "chapter": 95, "verse_start": 7, "verse_end": 11 }
+      ]
+    },
+    {
+      "id": 1166,
+      "title": "하나님은 제 칠일에 그의 모든 일을 쉬셨다",
+      "section": 119,
+      "order": 166,
+      "refs": [
+        { "book": "HEB", "chapter": 4, "verse_start": 4, "verse_end": 4 },
+        { "book": "GEN", "chapter": 2, "verse_start": 2, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1167,
+      "title": "네가 영원히 멜기세덱의 반차를 좇는 제사장이라",
+      "section": 119,
+      "order": 167,
+      "refs": [
+        { "book": "HEB", "chapter": 5, "verse_start": 6, "verse_end": 6 },
+        { "book": "HEB", "chapter": 7, "verse_start": 17, "verse_end": 17 },
+        { "book": "HEB", "chapter": 7, "verse_start": 21, "verse_end": 21 },
+        { "book": "PSA", "chapter": 110, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1168,
+      "title": "내가 반드시 너를 복주고 복주며",
+      "section": 119,
+      "order": 168,
+      "refs": [
+        { "book": "HEB", "chapter": 6, "verse_start": 13, "verse_end": 14 },
+        { "book": "GEN", "chapter": 22, "verse_start": 16, "verse_end": 17 }
+      ]
+    },
+    {
+      "id": 1169,
+      "title": "산에서 네게 보이던 본을 좇아",
+      "section": 119,
+      "order": 169,
+      "refs": [
+        { "book": "HEB", "chapter": 8, "verse_start": 5, "verse_end": 5 },
+        { "book": "EXO", "chapter": 25, "verse_start": 40, "verse_end": 40 }
+      ]
+    },
+    {
+      "id": 1170,
+      "title": "새 언약을 세우리라",
+      "section": 119,
+      "order": 170,
+      "refs": [
+        { "book": "HEB", "chapter": 8, "verse_start": 8, "verse_end": 12 },
+        { "book": "HEB", "chapter": 10, "verse_start": 16, "verse_end": 17 },
+        { "book": "JER", "chapter": 31, "verse_start": 31, "verse_end": 34 }
+      ]
+    },
+    {
+      "id": 1171,
+      "title": "이는 하나님이 너희에게 명하신 언약의 피라",
+      "section": 119,
+      "order": 171,
+      "refs": [
+        { "book": "HEB", "chapter": 9, "verse_start": 20, "verse_end": 20 },
+        { "book": "EXO", "chapter": 24, "verse_start": 8, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1172,
+      "title": "제사와 예물을 원치 아니하시고",
+      "section": 119,
+      "order": 172,
+      "refs": [
+        { "book": "HEB", "chapter": 10, "verse_start": 5, "verse_end": 7 },
+        { "book": "PSA", "chapter": 40, "verse_start": 6, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1173,
+      "title": "에녹은 죽음을 보지 않고 옮기웠으니",
+      "section": 119,
+      "order": 173,
+      "refs": [
+        { "book": "HEB", "chapter": 11, "verse_start": 5, "verse_end": 5 },
+        { "book": "GEN", "chapter": 5, "verse_start": 24, "verse_end": 24 }
+      ]
+    },
+    {
+      "id": 1174,
+      "title": "지팡이 머리에 의지하여 경배하였으며",
+      "section": 119,
+      "order": 174,
+      "refs": [
+        { "book": "HEB", "chapter": 11, "verse_start": 21, "verse_end": 21 },
+        { "book": "GEN", "chapter": 47, "verse_start": 31, "verse_end": 31 }
+      ]
+    },
+    {
+      "id": 1175,
+      "title": "주의 징계하심을 경히 여기지 말며",
+      "section": 119,
+      "order": 175,
+      "refs": [
+        { "book": "HEB", "chapter": 12, "verse_start": 5, "verse_end": 6 },
+        { "book": "PRO", "chapter": 3, "verse_start": 11, "verse_end": 12 }
+      ]
+    },
+    {
+      "id": 1176,
+      "title": "짐승이라도 산에 이르거든 돌로 침을 당하리라",
+      "section": 119,
+      "order": 176,
+      "refs": [
+        { "book": "HEB", "chapter": 12, "verse_start": 20, "verse_end": 20 },
+        { "book": "EXO", "chapter": 19, "verse_start": 12, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1177,
+      "title": "내가 심히 두렵고 떨린다",
+      "section": 119,
+      "order": 177,
+      "refs": [
+        { "book": "HEB", "chapter": 12, "verse_start": 21, "verse_end": 21 },
+        { "book": "DEU", "chapter": 9, "verse_start": 19, "verse_end": 19 }
+      ]
+    },
+    {
+      "id": 1178,
+      "title": "또 한 번 땅만 아니라 하늘도 진동하리라",
+      "section": 119,
+      "order": 178,
+      "refs": [
+        { "book": "HEB", "chapter": 12, "verse_start": 26, "verse_end": 26 },
+        { "book": "HAG", "chapter": 2, "verse_start": 6, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1179,
+      "title": "우리 하나님은 소멸하는 불이심이니라",
+      "section": 119,
+      "order": 179,
+      "refs": [
+        { "book": "HEB", "chapter": 12, "verse_start": 29, "verse_end": 29 },
+        { "book": "DEU", "chapter": 4, "verse_start": 24, "verse_end": 24 }
+      ]
+    },
+    {
+      "id": 1180,
+      "title": "내가 과연 너희를 버리지 아니하고",
+      "section": 119,
+      "order": 180,
+      "refs": [
+        { "book": "HEB", "chapter": 13, "verse_start": 5, "verse_end": 5 },
+        { "book": "DEU", "chapter": 31, "verse_start": 6, "verse_end": 6 },
+        { "book": "JOS", "chapter": 1, "verse_start": 5, "verse_end": 5 }
+      ]
+    },
+    {
+      "id": 1181,
+      "title": "주는 나를 돕는 자시니 내가 무서워 아니하겠노라",
+      "section": 119,
+      "order": 181,
+      "refs": [
+        { "book": "HEB", "chapter": 13, "verse_start": 6, "verse_end": 6 },
+        { "book": "PSA", "chapter": 118, "verse_start": 6, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1182,
+      "title": "교만한 자를 물리치시고 겸손한 자에게 은혜를 주신다",
+      "section": 120,
+      "order": 182,
+      "refs": [
+        { "book": "JAS", "chapter": 4, "verse_start": 6, "verse_end": 6 },
+        { "book": "1PE", "chapter": 5, "verse_start": 5, "verse_end": 5 },
+        { "book": "PRO", "chapter": 3, "verse_start": 34, "verse_end": 34 }
+      ]
+    },
+    {
+      "id": 1183,
+      "title": "사랑은 허다한 죄를 덮느니라",
+      "section": 120,
+      "order": 183,
+      "refs": [
+        { "book": "JAS", "chapter": 5, "verse_start": 20, "verse_end": 20 },
+        { "book": "1PE", "chapter": 4, "verse_start": 8, "verse_end": 8 },
+        { "book": "PRO", "chapter": 10, "verse_start": 12, "verse_end": 12 }
+      ]
+    },
+    {
+      "id": 1184,
+      "title": "내가 거룩하니 너희도 거룩할지어다",
+      "section": 121,
+      "order": 184,
+      "refs": [
+        { "book": "1PE", "chapter": 1, "verse_start": 16, "verse_end": 16 },
+        { "book": "LEV", "chapter": 11, "verse_start": 44, "verse_end": 44 },
+        { "book": "LEV", "chapter": 19, "verse_start": 2, "verse_end": 2 }
+      ]
+    },
+    {
+      "id": 1185,
+      "title": "모든 육체는 풀과 같고",
+      "section": 121,
+      "order": 185,
+      "refs": [
+        { "book": "1PE", "chapter": 1, "verse_start": 24, "verse_end": 25 },
+        { "book": "ISA", "chapter": 40, "verse_start": 6, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1186,
+      "title": "택하신 족속이요 왕 같은 제사장들이요",
+      "section": 121,
+      "order": 186,
+      "refs": [
+        { "book": "1PE", "chapter": 2, "verse_start": 9, "verse_end": 9 },
+        { "book": "EXO", "chapter": 19, "verse_start": 5, "verse_end": 6 },
+        { "book": "ISA", "chapter": 43, "verse_start": 20, "verse_end": 21 }
+      ]
+    },
+    {
+      "id": 1187,
+      "title": "저는 죄를 범치 아니하시고 그 입에 궤사도 없으시며",
+      "section": 121,
+      "order": 187,
+      "refs": [
+        { "book": "1PE", "chapter": 2, "verse_start": 22, "verse_end": 25 },
+        { "book": "ISA", "chapter": 53, "verse_start": 5, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1188,
+      "title": "생명을 사랑하고 좋은 날 보기를 원하는 자는",
+      "section": 121,
+      "order": 188,
+      "refs": [
+        { "book": "1PE", "chapter": 3, "verse_start": 10, "verse_end": 12 },
+        { "book": "PSA", "chapter": 34, "verse_start": 12, "verse_end": 16 }
+      ]
+    },
+    {
+      "id": 1189,
+      "title": "저희의 두려워함을 두려워 말며",
+      "section": 121,
+      "order": 189,
+      "refs": [
+        { "book": "1PE", "chapter": 3, "verse_start": 14, "verse_end": 15 },
+        { "book": "ISA", "chapter": 8, "verse_start": 12, "verse_end": 13 }
+      ]
+    },
+    {
+      "id": 1190,
+      "title": "의인이 겨우 구원을 얻으면",
+      "section": 121,
+      "order": 190,
+      "refs": [
+        { "book": "1PE", "chapter": 4, "verse_start": 18, "verse_end": 18 },
+        { "book": "PRO", "chapter": 11, "verse_start": 31, "verse_end": 31 }
+      ]
+    },
+    {
+      "id": 1191,
+      "title": "개가 그 토하였던 것에 돌아가고",
+      "section": 122,
+      "order": 191,
+      "refs": [
+        { "book": "2PE", "chapter": 2, "verse_start": 22, "verse_end": 22 },
+        { "book": "PRO", "chapter": 26, "verse_start": 11, "verse_end": 11 }
+      ]
+    },
+    {
+      "id": 1192,
+      "title": "천 년이 하루 같다",
+      "section": 122,
+      "order": 192,
+      "refs": [
+        { "book": "2PE", "chapter": 3, "verse_start": 8, "verse_end": 8 },
+        { "book": "PSA", "chapter": 90, "verse_start": 4, "verse_end": 4 }
+      ]
+    },
+    {
+      "id": 1193,
+      "title": "새 하늘과 새 땅",
+      "section": 122,
+      "order": 193,
+      "refs": [
+        { "book": "2PE", "chapter": 3, "verse_start": 13, "verse_end": 13 },
+        { "book": "REV", "chapter": 21, "verse_start": 1, "verse_end": 1 },
+        { "book": "ISA", "chapter": 65, "verse_start": 17, "verse_end": 17 }
+      ]
+    },
+    {
+      "id": 1194,
+      "title": "구름을 타고 오시리라, 찌른 자들도 볼 터이요",
+      "section": 127,
+      "order": 194,
+      "refs": [
+        { "book": "REV", "chapter": 1, "verse_start": 7, "verse_end": 7 },
+        { "book": "DAN", "chapter": 7, "verse_start": 13, "verse_end": 13 },
+        { "book": "ZEC", "chapter": 12, "verse_start": 10, "verse_end": 10 }
+      ]
+    },
+    {
+      "id": 1195,
+      "title": "나는 처음이요 나중이라",
+      "section": 127,
+      "order": 195,
+      "refs": [
+        { "book": "REV", "chapter": 1, "verse_start": 17, "verse_end": 17 },
+        { "book": "REV", "chapter": 22, "verse_start": 13, "verse_end": 13 },
+        { "book": "ISA", "chapter": 44, "verse_start": 6, "verse_end": 6 }
+      ]
+    },
+    {
+      "id": 1196,
+      "title": "철장을 가지고 저희를 다스려 질그릇 깨뜨리는 것과 같이",
+      "section": 127,
+      "order": 196,
+      "refs": [
+        { "book": "REV", "chapter": 2, "verse_start": 27, "verse_end": 27 },
+        { "book": "REV", "chapter": 12, "verse_start": 5, "verse_end": 5 },
+        { "book": "REV", "chapter": 19, "verse_start": 15, "verse_end": 15 },
+        { "book": "PSA", "chapter": 2, "verse_start": 9, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1197,
+      "title": "다윗의 열쇠를 가지신 이",
+      "section": 127,
+      "order": 197,
+      "refs": [
+        { "book": "REV", "chapter": 3, "verse_start": 7, "verse_end": 7 },
+        { "book": "ISA", "chapter": 22, "verse_start": 22, "verse_end": 22 }
+      ]
+    },
+    {
+      "id": 1198,
+      "title": "거룩하다 거룩하다 거룩하다",
+      "section": 127,
+      "order": 198,
+      "refs": [
+        { "book": "REV", "chapter": 4, "verse_start": 8, "verse_end": 8 },
+        { "book": "ISA", "chapter": 6, "verse_start": 3, "verse_end": 3 }
+      ]
+    },
+    {
+      "id": 1199,
+      "title": "산과 바위에게 이르되 우리 위에 떨어져",
+      "section": 127,
+      "order": 199,
+      "refs": [
+        { "book": "REV", "chapter": 6, "verse_start": 16, "verse_end": 16 },
+        { "book": "HOS", "chapter": 10, "verse_start": 8, "verse_end": 8 }
+      ]
+    },
+    {
+      "id": 1200,
+      "title": "다시 주리지도 아니하며, 모든 눈물을 씻기시리라",
+      "section": 127,
+      "order": 200,
+      "refs": [
+        { "book": "REV", "chapter": 7, "verse_start": 16, "verse_end": 17 },
+        { "book": "REV", "chapter": 21, "verse_start": 4, "verse_end": 4 },
+        { "book": "ISA", "chapter": 25, "verse_start": 8, "verse_end": 8 },
+        { "book": "ISA", "chapter": 49, "verse_start": 10, "verse_end": 10 }
+      ]
+    },
+    {
+      "id": 1201,
+      "title": "무너졌도다 무너졌도다 큰 성 바벨론이여",
+      "section": 127,
+      "order": 201,
+      "refs": [
+        { "book": "REV", "chapter": 14, "verse_start": 8, "verse_end": 8 },
+        { "book": "REV", "chapter": 18, "verse_start": 2, "verse_end": 2 },
+        { "book": "ISA", "chapter": 21, "verse_start": 9, "verse_end": 9 }
+      ]
+    },
+    {
+      "id": 1202,
+      "title": "만국이 와서 주께 경배하리이다",
+      "section": 127,
+      "order": 202,
+      "refs": [
+        { "book": "REV", "chapter": 15, "verse_start": 3, "verse_end": 4 },
+        { "book": "PSA", "chapter": 86, "verse_start": 9, "verse_end": 9 },
+        { "book": "JER", "chapter": 10, "verse_start": 7, "verse_end": 7 }
+      ]
+    },
+    {
+      "id": 1203,
+      "title": "내 백성아 거기서 나와",
+      "section": 127,
+      "order": 203,
+      "refs": [
+        { "book": "REV", "chapter": 18, "verse_start": 4, "verse_end": 4 },
+        { "book": "JER", "chapter": 51, "verse_start": 45, "verse_end": 45 }
+      ]
+    },
+    {
+      "id": 1204,
+      "title": "해나 달의 비췸이 쓸 데 없으니",
+      "section": 127,
+      "order": 204,
+      "refs": [
+        { "book": "REV", "chapter": 21, "verse_start": 23, "verse_end": 23 },
+        { "book": "ISA", "chapter": 60, "verse_start": 19, "verse_end": 19 }
+      ]
+    }
+  ]
+}
