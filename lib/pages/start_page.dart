@@ -34,14 +34,16 @@ class StartPage extends StatelessWidget {
           // 화면이 낮아도(가로 모드 등) 넘치지 않게 스크롤, 높으면 가운데 정렬
           child: LayoutBuilder(
             builder: (context, box) => SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
               child: ConstrainedBox(
-                constraints: BoxConstraints(minHeight: box.maxHeight - 48),
+                constraints: BoxConstraints(minHeight: box.maxHeight - 32),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const StartEmblem(size: 140),
-                    const SizedBox(height: 32),
+                    // 폰 브라우저(주소창 때문에 화면이 낮음)에서도 스크롤 없이 한 화면에 들어오게
+                    // 그림·간격을 작게 잡음
+                    const StartEmblem(size: 100),
+                    const SizedBox(height: 20),
                     Text(
                       '병행 구절 대조',
                       style: theme.textTheme.headlineMedium?.copyWith(
@@ -49,26 +51,26 @@ class StartPage extends StatelessWidget {
                         color: scheme.primary,
                       ),
                     ),
-                    const SizedBox(height: 24),
+                    const SizedBox(height: 16),
                     Text(
                       '복음서의 병행 본문과\n'
                       '신약이 인용한 구약 본문을\n'
                       '나란히 놓고 같은 표현을\n'
                       '색으로 비교합니다.',
                       textAlign: TextAlign.center,
-                      style: theme.textTheme.titleMedium?.copyWith(height: 1.6),
+                      style: theme.textTheme.titleMedium?.copyWith(height: 1.35),
                     ),
-                    const SizedBox(height: 24),
+                    const SizedBox(height: 16),
                     Text(
                       '성경 본문 : 개역한글',
                       style: theme.textTheme.bodyMedium?.copyWith(color: muted),
                     ),
-                    const SizedBox(height: 32),
+                    const SizedBox(height: 20),
                     // 버튼 자리: 준비 중 / 오류 / 시작하기
-                    SizedBox(height: 72, child: Center(child: _action(theme))),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 64, child: Center(child: _action(theme))),
+                    const SizedBox(height: 20),
                     const ChurchLogo(),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 12),
                     Text(
                       'Parallel_Bible   ver. $appVersion',
                       style: theme.textTheme.bodySmall?.copyWith(color: muted),

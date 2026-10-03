@@ -67,4 +67,18 @@ void main() {
       expect(tester.takeException(), isNull, reason: '$brightness');
     }
   });
+
+  testWidgets('시작 화면: 폰 브라우저 높이(360×560)에서 스크롤 없이 한 화면에 들어옴', (
+    tester,
+  ) async {
+    // 안드로이드 크롬·아이폰 사파리는 주소창·아래 막대 때문에 보이는 높이가 560px 안팎
+    await pumpAt(
+      tester,
+      const Size(360, 560),
+      StartPage(message: '', onStart: () {}),
+    );
+    final scroll = tester.state<ScrollableState>(find.byType(Scrollable));
+    expect(scroll.position.maxScrollExtent, 0);
+    expect(tester.takeException(), isNull);
+  });
 }
