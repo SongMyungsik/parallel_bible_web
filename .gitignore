@@ -43,3 +43,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# 용어사전: 저작권 확인 전까지 올리지 않음 (CLAUDE.md 참고)
+/assets/visionbible.json
